@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mangxahoi/components/login/login.dart';
+import 'package:mangxahoi/home_page.dart';
+import 'package:mangxahoi/test.dart';
 
 import 'on_boarding_page.dart';
 
@@ -13,6 +16,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // initialRoute: '/',
+      // routes: <String, WidgetBuilder>{
+      //   '/': (context) => const OnBoardingPage(),
+      //   '/second': (context) => const TestNe(),
+      // },
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -26,7 +34,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const OnBoardingPage(),
+      home: const loginPage(),
     );
   }
 }
