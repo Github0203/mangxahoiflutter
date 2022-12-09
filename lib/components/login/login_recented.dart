@@ -14,19 +14,35 @@ class loginRecented extends StatelessWidget {
         children: <Widget>[
           Container(
             child: Row(
-              children: const <Widget>[
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: thumbnailLoginRecented(),
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    child: const thumbnailLoginRecented(),
+                  ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: thumbnailLoginRecented(),
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    child: const thumbnailLoginRecented(),
+                  ),
                 ),
               ],
             ),
           ),
-          Container(),
+          Container(
+            child: const Center(
+                child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'Đăng nhập gần đây',
+                style: TextStyle(
+                    fontSize: 16, color: Color.fromARGB(255, 255, 255, 255)),
+              ),
+            )),
+          )
         ],
       ),
     );

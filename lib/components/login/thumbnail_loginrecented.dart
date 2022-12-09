@@ -16,20 +16,22 @@ class thumbnailLoginRecented extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       width: 126,
-                      child: const ClipRRect(
+                      height: 142,
+                      decoration: const BoxDecoration(
                         borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(7.0),
                           topLeft: Radius.circular(7.0),
+                          topRight: Radius.circular(7.0),
                         ),
-                        child: Image(
+                        image: DecorationImage(
+                          fit: BoxFit.fill,
                           image: NetworkImage(
-                              'https://images.unsplash.com/photo-1670441384415-4680ddc2017e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'),
+                              "https://images.unsplash.com/photo-1670441384415-4680ddc2017e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"),
                         ),
                       ),
                     ),
                     const Padding(
                       padding: EdgeInsets.all(4.0),
-                      child: icon_dong(),
+                      child: icon_dongthumb(),
                     ),
                   ],
                 ),

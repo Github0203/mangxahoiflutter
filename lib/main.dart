@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mangxahoi/components/login/forgetPass.dart';
 import 'package:mangxahoi/components/login/login.dart';
 import 'package:mangxahoi/home_page.dart';
 import 'package:mangxahoi/test.dart';
@@ -35,6 +36,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const loginPage(),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the HomeScreen widget.
+        // '/': (context) => const HomePage(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/forgetpass': (context) => const forgetPassComponent(),
+        '/login': (context) => const loginPage(),
+      },
     );
   }
 }
