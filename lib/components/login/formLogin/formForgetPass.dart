@@ -98,23 +98,26 @@ class _formForgetPassState extends State<formForgetPass> {
 
                       //// nút tiếp tục
 
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: const Color.fromARGB(255, 19, 27, 107),
-                          minimumSize: const Size.fromHeight(50),
+                      Padding(
+                        padding: const EdgeInsets.only(top:5.0, bottom:5.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: const Color.fromARGB(255, 19, 27, 107),
+                            minimumSize: const Size.fromHeight(50),
+                          ),
+                          child: const Text('Tiếp tục'),
+                          onPressed: () {
+                            if (select == 1) {
+                              setState(() {
+                                indexform = 1;
+                              });
+                            } else {
+                              setState(() {
+                                indexform = 2;
+                              });
+                            }
+                          },
                         ),
-                        child: const Text('Tiếp tục'),
-                        onPressed: () {
-                          if (select == 1) {
-                            setState(() {
-                              indexform = 1;
-                            });
-                          } else {
-                            setState(() {
-                              indexform = 2;
-                            });
-                          }
-                        },
                       ),
 
                       //// nút hủy

@@ -1,8 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:mangxahoi/test.dart';
+import 'package:email_validator/email_validator.dart';
 
-class formLogin extends StatelessWidget {
+class formLogin extends StatefulWidget {
   const formLogin({super.key});
 
+  @override
+  State<formLogin> createState() => _formLoginState();
+}
+
+class _formLoginState extends State<formLogin> {
+
+  final GlobalKey<FormState> _formKey = GlobalKey();
+  final TextEditingController _emailTextEditingController = TextEditingController();
+  final TextEditingController _passwordTextEditingController = TextEditingController();
+  bool _visiblePassword = false;
+  String? _email = "";
+  String? _password = "";
+  String? _error = "Please provide a valid email/password combination";
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,12 +44,70 @@ class formLogin extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
+                  //   InputTextWidget(
+                  //   labelText: 'Your Email Address',
+                  //   hintText: 'Enter Email Address',
+                  //   readOnly: false,
+                  //   textEditingController: _emailTextEditingController,
+                  //   keyboardType: TextInputType.emailAddress,
+                  //   textInputAction: TextInputAction.next,
+                  //   onChanged: (value){
+                  //     setState(() {
+                  //       _email = value!;
+                  //     });
+                  //   },
+                  //   validator: (email) {
+                  //     if (email != null && EmailValidator.validate(email)) {
+                  //       return null;
+                  //     }
+                  //     return "Invalid email address";
+                  //   },
+                  // ),
+                  // InputTextWidget(
+                  //   obscureText: !_visiblePassword,
+                  //   labelText: 'Your Password',
+                  //   hintText: 'Enter Password',
+                  //   readOnly: false,
+                  //   textEditingController: _passwordTextEditingController,
+                  //   textInputAction: TextInputAction.done,
+                  //   keyboardType: TextInputType.visiblePassword,
+                  //   onChanged: (value) {
+                  //     setState(() {
+                  //       _password = value!;
+                  //     });
+                  //   },
+                  //   validator: (password) {
+                  //     if (password == null || password.isEmpty) {
+                  //       return "Empty password";
+                  //     }
+                  //     else if (password.isNotEmpty && password.length < 8) {
+                  //       return "Password need at least 8 character";
+                  //     }
+                  //     return null;
+                  //   },
+                  //   suffixIcon: InkWell(
+                  //     onTap: () {
+                  //       setState(() {
+                  //         _visiblePassword = !_visiblePassword;
+                  //       });
+                  //     },
+                  //     child: Icon(
+                  //       _visiblePassword
+                  //           ? Icons.visibility_off
+                  //           : Icons.visibility,
+                  //       color: Colors.white,
+                  //     ),
+                  //   ),
+                  // ),
                     Container(
                       padding: const EdgeInsets.fromLTRB(0, 10, 10, 0),
                       child: TextField(
+                        textInputAction: TextInputAction.continueAction,
+                        style: const TextStyle(color: Colors.white),
+                        cursorColor: Colors.white,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(90.0),
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                           enabledBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
@@ -34,6 +115,12 @@ class formLogin extends StatelessWidget {
                                 color: Color.fromARGB(
                                     255, 255, 255, 255)), //<-- SEE HERE
                           ),
+                          focusedBorder: const OutlineInputBorder(
+        borderSide: BorderSide(width: 1, color: Colors.white),
+      ),
+                          labelStyle: const TextStyle(
+      color: Color.fromARGB(255, 255, 255, 255), //<-- SEE HERE
+    ),
                           labelText: 'Email',
                         ),
                       ),
@@ -44,14 +131,18 @@ class formLogin extends StatelessWidget {
                         obscureText: true,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(90.0),
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
+                          
                           enabledBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
                                 width: 1,
                                 color: Color.fromARGB(
                                     255, 255, 255, 255)), //<-- SEE HERE
                           ),
+                          focusedBorder: const OutlineInputBorder(
+        borderSide: BorderSide(width: 1, color: Colors.yellow),
+      ),
                           labelText: 'Mật khẩu',
                         ),
                       ),
@@ -60,7 +151,9 @@ class formLogin extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                        Navigator.pushNamed(context, '/forgetpass');
+                          },
                           child: const Text(
                             'Quên mật khẩu?',
                             style: TextStyle(
@@ -98,7 +191,7 @@ class formLogin extends StatelessWidget {
                       ),
                       child: const Text('Tạo tài khoản'),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/forgetpass');
+                        Navigator.pushNamed(context, '/createaccount');
                       },
                     )),
                   ],

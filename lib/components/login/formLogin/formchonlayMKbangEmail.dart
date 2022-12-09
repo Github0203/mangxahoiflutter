@@ -24,7 +24,7 @@ class chonlayMKbangEmail extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(90.0),
+                    borderRadius: BorderRadius.circular(10.0),
                   ),
                   enabledBorder: const OutlineInputBorder(
                     borderSide: BorderSide(
@@ -32,6 +32,9 @@ class chonlayMKbangEmail extends StatelessWidget {
                         color:
                             Color.fromARGB(255, 255, 255, 255)), //<-- SEE HERE
                   ),
+                  focusedBorder: const OutlineInputBorder(
+        borderSide: BorderSide(width: 1, color: Colors.yellow),
+      ),
                   labelText: 'Email',
                 ),
               ),
