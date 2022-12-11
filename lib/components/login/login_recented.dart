@@ -7,44 +7,38 @@ class loginRecented extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double setpaddingthucong = MediaQuery.of(context).size.width;
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    child: const thumbnailLoginRecented(),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    child: const thumbnailLoginRecented(),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            child: const Center(
-                child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Đăng nhập gần đây',
-                style: TextStyle(
-                    fontSize: 16, color: Color.fromARGB(255, 255, 255, 255)),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                child: const thumbnailLoginRecented(),
               ),
-            )),
-          )
-        ],
-      ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: thumbnailLoginRecented(),
+            ),
+          ],
+        ),
+        Container(
+          child: const Center(
+              child: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              'Đăng nhập gần đây',
+              style: TextStyle(
+                  fontSize: 16, color: Color.fromARGB(255, 255, 255, 255)),
+            ),
+          )),
+        )
+      ],
     );
   }
 }

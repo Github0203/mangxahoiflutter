@@ -11,15 +11,16 @@ class loginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double setpaddingthucong = MediaQuery.of(context).size.width;
+    double setHeightThuCong = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
-        child: Container(
+        child: Container(          
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/png/hinhnen.png"),
               fit: BoxFit.fill,
             ),
-          ),
+          ),       
           child: Padding(
             padding: EdgeInsets.only(
                 top: setpaddingthucong * 0.1,
