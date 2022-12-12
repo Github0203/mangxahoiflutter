@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:mangxahoi/components/dialog/native_ios_dialog.dart';
 import 'package:mangxahoi/components/widgets/ButtonComponentMauXanhDam.dart';
 import 'package:mangxahoi/components/widgets/InputTextWidget.dart';
-
+import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:mangxahoi/pages/feeds/feeds.dart';
 import '../../../components/widgets/ButtonComponentMauChinh.dart';
+import 'dart:async';
+import 'package:flutter_dialogs/flutter_dialogs.dart';
 
 class formLogin extends StatefulWidget {
   const formLogin({super.key});
@@ -22,16 +25,54 @@ class _formLoginState extends State<formLogin> {
   bool _hienloi = false;
   String? _email = "";
   String? _password = "";
+  String _countmove = "";
   String? _error = "Email hoặc pass bị sai";
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
+
+int _start = 10;
+late Timer _timer;
+//function start timer and show the count down second
+void startTimer() {
+  const oneSec = Duration(seconds: 1);
+   _timer =  Timer.periodic(
+    oneSec,
+    (Timer timer) {
+      if (_start == 0) {
+        setState(() {
+          timer.cancel();
+          changeScreen();
+        });
+      } else {
+        setState(() {
+          _start--;
+        });
+      }
+    },
+  );
+}
+
+
+ changeScreen() async {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (BuildContext context) {
+          return const feedPage();
+        },
+      ),
+    );
   }
 
   @override
+  void initState() {
+    super.initState();
+    // startTimer();
+    //startTimeout();
+  }
+
+
+  @override
   Widget build(BuildContext context) {
+
     return Form(
       key: _formKey,
       child: Container(
@@ -274,7 +315,44 @@ class _formLoginState extends State<formLogin> {
                         onPressed: () {
                           if (_email == 'a@a.com' && _password == '123') {
                             // Navigator.pushNamed(context, '/feed');
-                            const AlertDialogExample();
+                             setState(() {
+                              _hienloi = false;
+                            });
+
+    //                         Timer(
+    // const Duration(seconds: 5),
+    // () => Navigator.pushReplacement(
+    //     context, MaterialPageRoute(builder: (context) => const feedPage())));
+
+  startTimer();
+showDialog(context: context, builder: (BuildContext context){
+    return AlertDialog(
+      title: Text("Success"),
+      content: Text("Saved successfully $_start"),
+    );
+});
+
+                    //         AwesomeDialog(
+                    //   context: context,
+                    //   animType: AnimType.topSlide,
+                    //   headerAnimationLoop: true,
+                    //   dialogType: DialogType.success,
+                    //   showCloseIcon: true,
+                    //   title: 'Đăng nhập thành công',
+                    //   desc:
+                    //       // ignore: prefer_interpolation_to_compose_strings
+                    //       // 'Tài khoản sẽ đăng nhập trong... \n $_start'
+                    //       Text('timer la: $_start').toString()
+                    //       ,
+                    //   // btnOkOnPress: () {
+                    //   //   debugPrint('OnClcik');
+                               
+                    //   // },
+                    //   btnOkIcon: Icons.check_circle,
+                    //   onDismissCallback: (type) {
+                    //     debugPrint('Dialog Dissmiss from callback $type');
+                    //   },
+                    // ).show();
                           } else {
                             setState(() {
                               _hienloi = true;
@@ -283,6 +361,10 @@ class _formLoginState extends State<formLogin> {
                         },
                         child: const Text('Đăng nhập'),
                       ),
+                      
+
+                    Text('timer la: $_start'),
+
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -318,3 +400,5 @@ class _formLoginState extends State<formLogin> {
     );
   }
 }
+
+

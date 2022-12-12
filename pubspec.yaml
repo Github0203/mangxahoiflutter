@@ -36,6 +36,11 @@ dependencies:
   country_picker: ^2.0.18
   csc_picker: ^0.2.6
   country_state_city_pro: ^0.0.3
+  awesome_dialog: ^3.0.2
+  circular_countdown: ^2.1.0
+  quiver: ^3.1.0
+  flutter_countdown_timer: ^1.2.0
+  flutter_dialogs: ^3.0.0
   
 
 

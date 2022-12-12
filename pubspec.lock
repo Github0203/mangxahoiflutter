@@ -8,6 +8,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.9.0"
+  awesome_dialog:
+    dependency: "direct main"
+    description:
+      name: awesome_dialog
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.2"
   boolean_selector:
     dependency: transitive
     description:
@@ -43,6 +50,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.1"
+  circular_countdown:
+    dependency: "direct main"
+    description:
+      name: circular_countdown
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
   clock:
     dependency: transitive
     description:
@@ -153,6 +167,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.3.0"
+  flutter_countdown_timer:
+    dependency: "direct main"
+    description:
+      name: flutter_countdown_timer
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.6.0"
+  flutter_dialogs:
+    dependency: "direct main"
+    description:
+      name: flutter_dialogs
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -200,6 +228,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "10.2.1"
+  graphs:
+    dependency: transitive
+    description:
+      name: graphs
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.2.0"
   http:
     dependency: transitive
     description:
@@ -361,6 +396,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
+  quiver:
+    dependency: "direct main"
+    description:
+      name: quiver
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.0"
+  rive:
+    dependency: transitive
+    description:
+      name: rive
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.9.1"
   rxdart:
     dependency: transitive
     description:
