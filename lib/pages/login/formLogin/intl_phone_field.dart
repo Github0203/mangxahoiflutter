@@ -4,7 +4,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mangxahoi/components/login/formLogin//country_picker_dialog.dart';
+import 'package:mangxahoi/pages/login/formLogin/country_picker_dialog.dart';
 
 import './countries.dart';
 import './phone_number.dart';
@@ -269,7 +269,7 @@ class IntlPhoneField extends StatefulWidget {
     this.cursorColor,
     this.disableLengthCheck = false,
     this.flagsButtonPadding = EdgeInsets.zero,
-    this.invalidNumberMessage = 'Invalid Mobile Number',
+    this.invalidNumberMessage = 'Số điện thoại chưa đúng',
     this.cursorHeight,
     this.cursorRadius = Radius.zero,
     this.cursorWidth = 2.0,
@@ -372,9 +372,30 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
       cursorWidth: widget.cursorWidth,
       showCursor: widget.showCursor,
       onFieldSubmitted: widget.onSubmitted,
-      decoration: widget.decoration.copyWith(
+      // decoration: widget.decoration.copyWith(
+      //   prefixIcon: _buildFlagsButton(),
+      //   counterText: !widget.enabled ? '' : null,
+      // ),
+      decoration: InputDecoration(
         prefixIcon: _buildFlagsButton(),
         counterText: !widget.enabled ? '' : null,
+        // suffixIcon: suffixIcon,
+        contentPadding: const EdgeInsets.fromLTRB(16, 0, 0, 0),
+        // hintText: hintText,
+        fillColor: Colors.black.withOpacity(0.1),
+        filled: true,
+        // labelText: labelText,
+        labelStyle: const TextStyle(color: Colors.white),
+        focusColor: Colors.white,
+        enabledBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.white),
+        ),
+        focusedBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.white),
+        ),
+        border: const OutlineInputBorder(),
+        errorBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white, width: 1.0)),
       ),
       style: widget.style,
       onSaved: (value) {
@@ -427,6 +448,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
         decoration: widget.dropdownDecoration,
         child: InkWell(
           borderRadius: widget.dropdownDecoration.borderRadius as BorderRadius?,
+          onTap: widget.enabled ? _changeCountry : null,
           child: Padding(
             padding: widget.flagsButtonPadding,
             child: Row(
@@ -437,7 +459,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                     widget.showDropdownIcon &&
                     widget.dropdownIconPosition == IconPosition.leading) ...[
                   widget.dropdownIcon,
-                  SizedBox(width: 4),
+                  const SizedBox(width: 4),
                 ],
                 if (widget.showCountryFlag) ...[
                   Image.asset(
@@ -445,7 +467,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                     package: 'intl_phone_field',
                     width: 32,
                   ),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                 ],
                 FittedBox(
                   child: Text(
@@ -456,14 +478,13 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                 if (widget.enabled &&
                     widget.showDropdownIcon &&
                     widget.dropdownIconPosition == IconPosition.trailing) ...[
-                  SizedBox(width: 4),
+                  const SizedBox(width: 4),
                   widget.dropdownIcon,
                 ],
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
               ],
             ),
           ),
-          onTap: widget.enabled ? _changeCountry : null,
         ),
       ),
     );

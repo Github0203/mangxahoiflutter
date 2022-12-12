@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mangxahoi/components/buttons/buttons.dart';
-import 'package:mangxahoi/components/login/formLogin/formchoncachlaymaykhau.dart';
-import 'package:mangxahoi/components/login/formLogin/formchonlayMKbangEmail.dart';
-import 'package:mangxahoi/components/login/formLogin/formchonlayMKbangSDT.dart';
-import 'package:mangxahoi/components/login/formLogin/intl_phone_field.dart';
-import 'package:mangxahoi/components/login/login.dart';
+import 'package:mangxahoi/pages/login/formLogin/formchoncachlaymaykhau.dart';
+import 'package:mangxahoi/pages/login/formLogin/formchonlayMKbangEmail.dart';
+import 'package:mangxahoi/pages/login/formLogin/formchonlayMKbangSDT.dart';
+import 'package:mangxahoi/pages/login/formLogin/intl_phone_field.dart';
+import 'package:mangxahoi/pages/login/login.dart';
 
 enum SingingCharacter { lafayette, jefferson }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mangxahoi/components/login/formLogin/icon_logo.dart';
-import 'package:mangxahoi/components/login/formRegister/formRegister.dart';
+import 'package:mangxahoi/pages/login/formLogin/icon_logo.dart';
+import 'package:mangxahoi/pages/login/formRegister/formRegister.dart';
 
 class registerPage extends StatelessWidget {
   const registerPage({super.key});
@@ -9,9 +9,9 @@ class registerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double setpaddingthucong = MediaQuery.of(context).size.height;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
-        child: Container(         
-          height: setpaddingthucong, 
+        child: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/png/hinhnen.png"),
@@ -30,7 +30,6 @@ class registerPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    
                     //////// logo
                     const iconLogoComponent(),
 

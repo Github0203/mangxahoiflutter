@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mangxahoi/components/login/formLogin/countries.dart';
-import 'package:mangxahoi/components/login/formLogin//helpers.dart';
+import 'package:mangxahoi/pages/login/formLogin/countries.dart';
+import 'package:mangxahoi/pages/login/formLogin/helpers.dart';
 
 class PickerDialogStyle {
   final Color? backgroundColor;

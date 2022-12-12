@@ -39,3 +39,44 @@ class buttonCancel extends StatelessWidget {
     );
   }
 }
+
+const List<String> list = <String>['Nam', 'Nữ', 'Khác'];
+
+class SexGioitinh extends StatefulWidget {
+  const SexGioitinh({super.key});
+
+  @override
+  State<SexGioitinh> createState() => _SexGioitinhState();
+}
+
+class _SexGioitinhState extends State<SexGioitinh> {
+  String dropdownValue = list.first;
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton<String>(
+      focusColor: Colors.white,
+      value: dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      elevation: 16,
+      style: const TextStyle(color: Colors.deepPurple),
+      underline: Container(
+        height: 2,
+        color: Colors.deepPurpleAccent,
+      ),
+      onChanged: (String? value) {
+        // This is called when the user selects an item.
+        setState(() {
+          dropdownValue = value!;
+        });
+      },
+      items: list.map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+    );
+    ;
+  }
+}

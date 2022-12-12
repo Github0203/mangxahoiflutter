@@ -1655,3 +1655,22 @@ class icon_dongthumb extends StatelessWidget {
     ));
   }
 }
+
+// Icon dangkythanhcong
+class dangkythanhcong extends StatelessWidget {
+  const dangkythanhcong({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+        child: GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const HomePage()));
+      }, // Image tapped
+      child: Image.asset(
+        'assets/png/dangkythanhcong.png',
+      ),
+    ));
+  }
+}

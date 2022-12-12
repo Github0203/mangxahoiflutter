@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:mangxahoi/components/icons/Icons.dart';
-import 'package:mangxahoi/components/login/formLogin/formLogin.dart';
-import 'package:mangxahoi/components/login/formLogin/icon_logo.dart';
-import 'package:mangxahoi/components/login/login_recented.dart';
+import 'package:mangxahoi/pages/login/formLogin/formlogin.dart';
+import 'package:mangxahoi/pages/login/formLogin/icon_logo.dart';
+import 'package:mangxahoi/pages/login/login_recented.dart';
 
 class loginPage extends StatelessWidget {
   const loginPage({super.key});
@@ -14,13 +14,13 @@ class loginPage extends StatelessWidget {
     double setHeightThuCong = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
-        child: Container(          
+        child: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/png/hinhnen.png"),
               fit: BoxFit.fill,
             ),
-          ),       
+          ),
           child: Padding(
             padding: EdgeInsets.only(
                 top: setpaddingthucong * 0.1,
@@ -33,7 +33,6 @@ class loginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    
                     //////// logo
                     const iconLogoComponent(),
 

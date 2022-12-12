@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mangxahoi/components/login/forgetPass.dart';
-import 'package:mangxahoi/components/login/formRegister/registerPage.dart';
-import 'package:mangxahoi/components/login/login.dart';
+import 'package:mangxahoi/pages/feeds/feeds.dart';
+import 'package:mangxahoi/pages/login/forgetPass.dart';
+import 'package:mangxahoi/pages/login/formRegister/registerPage.dart';
+import 'package:mangxahoi/pages/login/formRegister/registerSussess.dart';
+import 'package:mangxahoi/pages/login/login.dart';
 import 'package:mangxahoi/home_page.dart';
 import 'package:mangxahoi/test.dart';
 
@@ -35,6 +37,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const loginPage(),
       initialRoute: '/',
@@ -45,6 +48,8 @@ class MyApp extends StatelessWidget {
         '/forgetpass': (context) => const forgetPassComponent(),
         '/login': (context) => const loginPage(),
         '/createaccount': (context) => const registerPage(),
+        '/registersussess': (context) => const registerSussess(),
+        '/feed': (context) => const feedPage(),
       },
     );
   }

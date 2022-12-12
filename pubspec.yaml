@@ -32,6 +32,11 @@ dependencies:
   flutter:
     sdk: flutter
   email_validator: '^2.1.16'
+  collection: ^1.15.0
+  country_picker: ^2.0.18
+  csc_picker: ^0.2.6
+  country_state_city_pro: ^0.0.3
+  
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -42,6 +47,7 @@ dependencies:
   flutter_swiper_null_safety: ^1.0.2
   font_awesome_flutter: ^10.2.1
   intl_phone_field: ^3.1.0
+  css_colors: ^1.1.1
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +72,10 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  plugin:
+    platforms:
+      ios:
+        pluginClass: NativeIosDialogPlugin
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -73,6 +83,9 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets: 
     - assets/png/
+    - packages/country_state_city_pro/assets/country.json
+    - packages/country_state_city_pro/assets/state.json
+    - packages/country_state_city_pro/assets/city.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

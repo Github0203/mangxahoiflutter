@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mangxahoi/components/login/formLogin/formForgetPass.dart';
-import 'package:mangxahoi/components/login/formLogin/icon_logo.dart';
+import 'package:mangxahoi/pages/login/formLogin/formForgetPass.dart';
+import 'package:mangxahoi/pages/login/formLogin/icon_logo.dart';
 
 class forgetPassComponent extends StatelessWidget {
   const forgetPassComponent({super.key});

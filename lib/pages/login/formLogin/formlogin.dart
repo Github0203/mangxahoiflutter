@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mangxahoi/components/dialog/native_ios_dialog.dart';
 import 'package:mangxahoi/components/widgets/ButtonComponentMauXanhDam.dart';
-import 'package:mangxahoi/components/widgets/ButtonComponentN.dart';
 import 'package:mangxahoi/components/widgets/InputTextWidget.dart';
-import 'package:mangxahoi/test.dart';
-import 'package:email_validator/email_validator.dart';
 
-import '../../widgets/ButtonComponentMauChinh.dart';
+import '../../../components/widgets/ButtonComponentMauChinh.dart';
 
 class formLogin extends StatefulWidget {
   const formLogin({super.key});
@@ -21,9 +19,10 @@ class _formLoginState extends State<formLogin> {
   final TextEditingController _passwordTextEditingController =
       TextEditingController();
   bool _visiblePassword = false;
+  bool _hienloi = false;
   String? _email = "";
   String? _password = "";
-  String? _error = "Please provide a valid email/password combination";
+  String? _error = "Email hoặc pass bị sai";
 
   @override
   void initState() {
@@ -42,7 +41,7 @@ class _formLoginState extends State<formLogin> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               const Padding(
-                padding:  EdgeInsets.fromLTRB(0,5,0,5),
+                padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
                 child: Text('Welcome to my Familys',
                     style: TextStyle(color: Colors.white, fontSize: 23)),
               ),
@@ -54,10 +53,18 @@ class _formLoginState extends State<formLogin> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
+                      //// lỗi khi sai email hoặc mật khẩu
+                      Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
+                          child: Text(
+                            _hienloi ? "Email hoặc pass bị sai" : "",
+                            style: const TextStyle(
+                                color: Color.fromARGB(186, 244, 67, 54)),
+                          )),
                       //// nhập Email
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
-                        child: InputTextWidgetA(
+                        child: InputTextWidgetComponent(
                           cursorColor: Colors.white,
                           labelText: 'Email',
                           hintText: 'Email',
@@ -97,7 +104,7 @@ class _formLoginState extends State<formLogin> {
                       //// nhập Password
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
-                        child: InputTextWidgetA(
+                        child: InputTextWidgetComponent(
                           obscureText: !_visiblePassword,
                           labelText: 'Mật khẩu',
                           hintText: 'Mật khẩu',
@@ -115,7 +122,7 @@ class _formLoginState extends State<formLogin> {
                               return "Chưa nhập mật khẩu";
                             } else if (password == '123') {
                               return "Mật khẩu đúng rồi";
-                            }else {
+                            } else {
                               return 'Mật khẩu chưa đúng';
                             }
                           },
@@ -264,11 +271,18 @@ class _formLoginState extends State<formLogin> {
                         ],
                       ),
                       ButtonComponentMauChinh(
-                        onPressed: (){
-                          // Navigator.pushNamed(context, '/createaccount');
+                        onPressed: () {
+                          if (_email == 'a@a.com' && _password == '123') {
+                            // Navigator.pushNamed(context, '/feed');
+                            const AlertDialogExample();
+                          } else {
+                            setState(() {
+                              _hienloi = true;
+                            });
+                          }
                         },
-                        child: const Text('Tạo tài khoản'),
-                        ),
+                        child: const Text('Đăng nhập'),
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -283,15 +297,15 @@ class _formLoginState extends State<formLogin> {
                         ],
                       ),
                       ButtonComponentMauXanhDam(
-                        onPressed: (){
+                        onPressed: () {
                           Navigator.pushNamed(context, '/createaccount');
                         },
                         style: ElevatedButton.styleFrom(
-                      primary: const Color.fromARGB(255, 19, 27, 107),
-                      minimumSize: const Size.fromHeight(50),
-                        ), 
-                        child: const Text('Tạo tài khoản'),
+                          primary: const Color.fromARGB(255, 19, 27, 107),
+                          minimumSize: const Size.fromHeight(50),
                         ),
+                        child: const Text('Tạo tài khoản'),
+                      ),
                     ],
                   ),
                 ),

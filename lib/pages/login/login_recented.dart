@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mangxahoi/components/login/thumbnail_loginrecented.dart';
+import 'package:mangxahoi/pages/login/thumbnail_loginrecented.dart';
 
 class loginRecented extends StatelessWidget {
   const loginRecented({super.key});

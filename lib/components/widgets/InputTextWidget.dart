@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class InputTextWidgetA extends StatelessWidget {
+class InputTextWidgetComponent extends StatelessWidget {
   final Function(String?) onChanged;
   final TextEditingController textEditingController;
   final String? Function(String?)? validator;
@@ -13,10 +13,8 @@ class InputTextWidgetA extends StatelessWidget {
   final TextInputAction? textInputAction;
   final Color? cursorColor;
 
-
-  
   // ignore: use_key_in_widget_constructors
-  const  InputTextWidgetA({
+  const InputTextWidgetComponent({
     required this.textEditingController,
     required this.onChanged,
     required this.labelText,
@@ -27,8 +25,8 @@ class InputTextWidgetA extends StatelessWidget {
     this.keyboardType,
     this.suffixIcon,
     this.textInputAction,
-    this.cursorColor, 
-    // required InputDecoration decoration, 
+    this.cursorColor,
+    // required InputDecoration decoration,
   });
 
   @override
@@ -59,13 +57,9 @@ class InputTextWidgetA extends StatelessWidget {
         ),
         border: const OutlineInputBorder(),
         errorBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white, width: 1.0)
-        ),
+            borderSide: BorderSide(color: Colors.white, width: 1.0)),
       ),
-      style: const TextStyle(
-        fontSize: 16,
-        color: Colors.white
-      ),
+      style: const TextStyle(fontSize: 16, color: Colors.white),
     );
   }
 }
