@@ -258,10 +258,10 @@ class icon_bangtin extends StatelessWidget {
     // ignore: avoid_unnecessary_containers
     return Container(
         child: GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
-      }, // Image tapped
+      // onTap: () {
+      //   Navigator.push(
+      //       context, MaterialPageRoute(builder: (context) => const HomePage()));
+      // }, // Image tapped
       child: Image.asset(
         'assets/png/icon_bangtin.png',
       ),
@@ -1379,10 +1379,10 @@ class icon_themban extends StatelessWidget {
     // ignore: avoid_unnecessary_containers
     return Container(
         child: GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
-      }, // Image tapped
+      // onTap: () {
+      //   Navigator.push(
+      //       context, MaterialPageRoute(builder: (context) => const HomePage()));
+      // }, // Image tapped
       child: Image.asset(
         'assets/png/icon_themban.png',
       ),
@@ -1550,10 +1550,10 @@ class icon_videofeed extends StatelessWidget {
     // ignore: avoid_unnecessary_containers
     return Container(
         child: GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
-      }, // Image tapped
+      // onTap: () {
+      //   Navigator.push(
+      //       context, MaterialPageRoute(builder: (context) => const HomePage()));
+      // }, // Image tapped
       child: Image.asset(
         'assets/png/icon_videofeed.png',
       ),

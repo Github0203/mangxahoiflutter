@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 
 class storiesFeed extends StatelessWidget {
   const storiesFeed({super.key});
@@ -9,7 +10,9 @@ class storiesFeed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Row(
-        children: [],
+        children: [
+          CustomerTextN.textButton16Medium('data'),
+        ],
       ),
     );
   }

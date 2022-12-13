@@ -1,4 +1,4 @@
-package com.example.mangxahoi
+package com.example.mangxahoiflutter
 
 import io.flutter.embedding.android.FlutterActivity
 

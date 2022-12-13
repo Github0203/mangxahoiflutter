@@ -38,6 +38,9 @@ dependencies:
   country_state_city_pro: ^0.0.3
   awesome_dialog: ^3.0.2
   timer_count_down: ^2.2.1
+  circular_countdown_timer: ^0.2.3
+  circular_countdown: ^2.1.0
+
   
 
 

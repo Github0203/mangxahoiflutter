@@ -4,10 +4,6 @@ import 'package:mangxahoi/pages/login/forgetPass.dart';
 import 'package:mangxahoi/pages/login/formRegister/registerPage.dart';
 import 'package:mangxahoi/pages/login/formRegister/registerSussess.dart';
 import 'package:mangxahoi/pages/login/login.dart';
-import 'package:mangxahoi/home_page.dart';
-import 'package:mangxahoi/test.dart';
-
-import 'on_boarding_page.dart';
 
 void main() {
   runApp(const MyApp());

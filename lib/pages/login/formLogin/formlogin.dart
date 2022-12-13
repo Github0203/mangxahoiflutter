@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mangxahoi/components/widgets/ButtonComponentMauXanhDam.dart';
 import 'package:mangxahoi/components/widgets/InputTextWidget.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
+// import 'package:timer_count_down/timer_controller.dart';
 import 'package:timer_count_down/timer_count_down.dart';
 import '../../../components/widgets/ButtonComponentMauChinh.dart';
 import '../../feeds/feeds.dart';
@@ -330,11 +331,14 @@ class _formLoginState extends State<formLogin> {
                                   child: Text(
                                       'Đăng nhập thành công, bạn sẽ được chuyển tới trong........'),
                                 ),
-                                Countdown(
-                                  seconds: 5,
-                                  build: (BuildContext context, double time) =>
-                                      Text(time.toString()),
-                                ),
+                                 Countdown(
+      seconds: 5,
+      build: (BuildContext context, double time) => Text(time.toString()),
+      // interval: Duration(milliseconds: 100),
+      // onFinished: () {
+      //   print('Timer is done!');
+      // },
+    ),
                               ],
                             ),
                             btnOkOnPress: () {

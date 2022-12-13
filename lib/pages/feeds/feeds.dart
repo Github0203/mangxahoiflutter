@@ -4,6 +4,7 @@ import 'package:mangxahoi/components/widgets/TextButtonWidgetComponent.dart';
 import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 import 'package:mangxahoi/main.dart';
 import 'package:mangxahoi/pages/feeds/appBAr/appBarComponent.dart';
+import 'package:mangxahoi/pages/feeds/feedPage.dart';
 
 class feedPage extends StatefulWidget {
   const feedPage({super.key});
@@ -14,6 +15,18 @@ class feedPage extends StatefulWidget {
 
 class _feedPageState extends State<feedPage> {
   int _selectedIndex = 0;
+
+  void _onItemTap(int index){
+    setState(() {
+      _selectedIndex=index;
+    });
+  }
+
+  static const List<Widget> _pages = <Widget>[
+                   icon_Logo(),
+                      storiesFeed(),
+                      icon_album(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -35,26 +48,27 @@ class _feedPageState extends State<feedPage> {
         ],
       ),
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Column(
-                children: [
-                  IndexedStack(
-                    index: 1,
-                    children: <Widget>[
-                      icon_Logo(),
-                      textButton18Medium(data: 'hihi'),
-                      icon_Logo(),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
+        // child: Padding(
+        //   padding: const EdgeInsets.all(8.0),
+        //   child: Column(
+        //     mainAxisAlignment: MainAxisAlignment.start,
+        //     children: <Widget>[
+        //       Column(
+        //         children: [
+        //           IndexedStack(
+        //             index: 1,
+        //             children: <Widget>[
+        //               icon_Logo(),
+        //               storiesFeed(),
+        //               icon_Logo(),
+        //             ],
+        //           ),
+        //         ],
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        child: _pages.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
@@ -69,10 +83,31 @@ class _feedPageState extends State<feedPage> {
                   flex: 4,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const <Widget>[
-                      icon_bangtin(),
-                      icon_themban(),
-                      icon_videofeed(),
+                    children: <Widget>[                      
+                      GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            _selectedIndex = 0;
+                          });
+                        },
+                        child: const icon_bangtin(),
+                        ),
+                      GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            _selectedIndex = 1;
+                          });
+                        },
+                        child: const icon_themban()
+                        ),
+                      GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            _selectedIndex = 2;
+                          });
+                        },
+                        child: const icon_videofeed(),
+                        ),                      
                     ],
                   ),
                 ),
