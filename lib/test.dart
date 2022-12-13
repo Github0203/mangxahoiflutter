@@ -12,9 +12,8 @@ class InputTextWidget extends StatelessWidget {
   final Widget? suffixIcon;
   final TextInputAction? textInputAction;
 
-  
   // ignore: use_key_in_widget_constructors
-  const  InputTextWidget({
+  const InputTextWidget({
     required this.textEditingController,
     required this.onChanged,
     required this.labelText,
@@ -25,7 +24,6 @@ class InputTextWidget extends StatelessWidget {
     this.keyboardType,
     this.suffixIcon,
     this.textInputAction,
-    
   });
 
   @override
@@ -56,13 +54,9 @@ class InputTextWidget extends StatelessWidget {
         ),
         border: const OutlineInputBorder(),
         errorBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.red, width: 2.0)
-        ),
+            borderSide: BorderSide(color: Colors.red, width: 2.0)),
       ),
-      style: const TextStyle(
-        fontSize: 16,
-        color: Colors.white
-      ),
+      style: const TextStyle(fontSize: 16, color: Colors.white),
     );
   }
 }

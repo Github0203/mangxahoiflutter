@@ -7,13 +7,20 @@ class appBarComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         const icon_Logo(),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: const <Widget>[
-            phimtatthem(),
-            icon_timkiemtrongtrang(),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: phimtatthem(),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: icon_search(),
+            ),
             icon_tinnhan(),
           ],
         ),
