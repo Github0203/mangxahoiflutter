@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:mangxahoi/components/widgets/ButtonComponentMauXanhDam.dart';
 import 'package:mangxahoi/components/widgets/InputTextWidget.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:mangxahoi/pages/feeds/feedPage.dart';
 // import 'package:timer_count_down/timer_controller.dart';
 import 'package:timer_count_down/timer_count_down.dart';
 import '../../../components/widgets/ButtonComponentMauChinh.dart';
@@ -287,7 +288,7 @@ class _formLoginState extends State<formLogin> {
                               () => Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const feedPage())));
+                                      builder: (context) => const feedHome())));
 
                           // Countdown(
                           //   seconds: 5,
@@ -331,14 +332,15 @@ class _formLoginState extends State<formLogin> {
                                   child: Text(
                                       'Đăng nhập thành công, bạn sẽ được chuyển tới trong........'),
                                 ),
-                                 Countdown(
-      seconds: 5,
-      build: (BuildContext context, double time) => Text(time.toString()),
-      // interval: Duration(milliseconds: 100),
-      // onFinished: () {
-      //   print('Timer is done!');
-      // },
-    ),
+                                Countdown(
+                                  seconds: 5,
+                                  build: (BuildContext context, double time) =>
+                                      Text(time.toString()),
+                                  // interval: Duration(milliseconds: 100),
+                                  // onFinished: () {
+                                  //   print('Timer is done!');
+                                  // },
+                                ),
                               ],
                             ),
                             btnOkOnPress: () {
@@ -346,7 +348,7 @@ class _formLoginState extends State<formLogin> {
                               Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const feedPage()));
+                                      builder: (context) => const feedHome()));
                             },
                             btnOkIcon: Icons.check_circle,
                             onDismissCallback: (type) {
