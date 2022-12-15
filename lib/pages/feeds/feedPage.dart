@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mangxahoi/components/icons/Icons.dart';
-import 'package:mangxahoi/components/widgets/TextButtonWidgetComponent.dart';
-import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
-import 'package:mangxahoi/main.dart';
 import 'package:mangxahoi/pages/feeds/appBAr/appBarComponent.dart';
 import 'package:mangxahoi/pages/feeds/feedComponents.dart';
 
@@ -47,13 +44,15 @@ class _feedHomeState extends State<feedHome> {
           // ),
         ],
       ),
-      body: Container(
-        width: setweidththucong,
-        decoration: const BoxDecoration(
-          color: Color.fromARGB(255, 207, 207, 207),
-        ),
-        child: Center(
-          child: _pages.elementAt(_selectedIndex),
+      body: SingleChildScrollView(
+        child: Container(
+          width: setweidththucong,
+          decoration: const BoxDecoration(
+            color: Color.fromARGB(255, 207, 207, 207),
+          ),
+          child: Center(
+            child: _pages.elementAt(_selectedIndex),
+          ),
         ),
       ),
       bottomNavigationBar: BottomAppBar(

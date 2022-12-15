@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 import 'package:mangxahoi/pages/feeds/howdoyouthinkComponent.dart';
+import 'package:mangxahoi/pages/feeds/postComponent.dart';
 import 'package:mangxahoi/pages/feeds/shortcut3cuc.dart';
 import 'package:mangxahoi/pages/feeds/storiesFeed.dart';
 
@@ -44,6 +45,7 @@ class feedComponents extends StatelessWidget {
             ),
             child: const shortcut3cuc(),
           ),
+          const postComponent(),
         ],
       ),
     );

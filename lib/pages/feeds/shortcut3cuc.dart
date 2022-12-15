@@ -21,7 +21,7 @@ class shortcut3cuc extends StatelessWidget {
             ),
             child: Column(children: <Widget>[
               const icon_phonghopmat(),
-              CustomerTextN.textButton13Medium('Phòng họp mặt'),
+              CustomerTextN.textButton13Normal('Phòng họp mặt'),
             ]),
           ),
           Container(
@@ -32,7 +32,7 @@ class shortcut3cuc extends StatelessWidget {
             ),
             child: Column(children: <Widget>[
               const icon_video(),
-              CustomerTextN.textButton13Medium('Video trực tiếp'),
+              CustomerTextN.textButton13Normal('Video trực tiếp'),
             ]),
           ),
           Container(
@@ -43,7 +43,7 @@ class shortcut3cuc extends StatelessWidget {
             ),
             child: Column(children: <Widget>[
               const icon_sukien(),
-              CustomerTextN.textButton13Medium('Tạo sự kiện'),
+              CustomerTextN.textButton13Normal('Tạo sự kiện'),
             ]),
           ),
         ],

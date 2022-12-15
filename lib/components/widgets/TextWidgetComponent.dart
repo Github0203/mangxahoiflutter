@@ -14,8 +14,14 @@ class CustomerTextN {
       style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16.0),
     );
   }
+  static Widget textButton16Normal(String data) {
+    return Text(
+      data,
+      style: const TextStyle(fontSize: 16.0),
+    );
+  }
 
-  static Widget textButton13Medium(String data) {
+  static Widget textButton13Normal(String data) {
     return Text(
       data,
       style: const TextStyle(fontSize: 13.0),
