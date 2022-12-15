@@ -15,21 +15,19 @@ class ButtonComponentMauXanhDam extends StatelessWidget {
   final FocusNode? focusNode;
   final MaterialStatesController? statesController;
 
-
-  
   // ignore: use_key_in_widget_constructors
-  const  ButtonComponentMauXanhDam({
-    required this.onPressed,    
-    // required this.onLongPressed, 
-    // required this.onHover, 
+  const ButtonComponentMauXanhDam({
+    required this.onPressed,
+    // required this.onLongPressed,
+    // required this.onHover,
     // required this.onFocusChange,
     // this.validator,
-    this.color,     
-    this.child, 
-    this.key, 
-    this.style, 
-    this.focusNode,   
-    this.statesController, 
+    this.color,
+    this.child,
+    this.key,
+    this.style,
+    this.focusNode,
+    this.statesController,
   });
 
   @override
@@ -45,9 +43,17 @@ class ButtonComponentMauXanhDam extends StatelessWidget {
       statesController: statesController,
       child: child,
       style: ElevatedButton.styleFrom(
-                      primary: const Color.fromARGB(255, 19, 27, 107),
-                      minimumSize: const Size.fromHeight(50),
-                        ),
-      );
+        primary: const Color.fromARGB(255, 19, 27, 107),
+        minimumSize: const Size.fromHeight(50),
+      ),
+    );
+  }
+}
+
+class ContainerCustomer {
+  static Widget borderContainer() {
+    return Container(
+      decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent)),
+    );
   }
 }

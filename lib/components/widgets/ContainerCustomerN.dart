@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomerTextN {
+class ContainerCustomerN {
   static Widget textButton18Medium(String data) {
     return Text(
       data,
@@ -12,13 +12,6 @@ class CustomerTextN {
     return Text(
       data,
       style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16.0),
-    );
-  }
-
-  static Widget textButton13Medium(String data) {
-    return Text(
-      data,
-      style: const TextStyle(fontSize: 13.0),
     );
   }
 }

@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:mangxahoi/components/widgets/ButtonComponentMauXanhDam.dart';
 import 'package:mangxahoi/components/widgets/InputTextWidget.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
-import 'package:mangxahoi/pages/feeds/feedPage.dart';
+import 'package:mangxahoi/pages/feeds/feedComponents.dart';
 // import 'package:timer_count_down/timer_controller.dart';
 import 'package:timer_count_down/timer_count_down.dart';
 import '../../../components/widgets/ButtonComponentMauChinh.dart';
-import '../../feeds/feeds.dart';
+import '../../feeds/feedPage.dart';
 
 class formLogin extends StatefulWidget {
   const formLogin({super.key});
@@ -145,121 +145,8 @@ class _formLoginState extends State<formLogin> {
                             color: Colors.white,
                           ),
                         ),
-
-                        // decoration: InputDecoration(
-                        //           suffixIcon: IconButton(
-                        //             icon: Icon(
-                        //               // Based on passwordVisible state choose the icon
-                        //               _visiblePassword
-                        //                   ? Icons.visibility
-                        //                   : Icons.visibility_off,
-                        //               color: Colors.transparent,
-                        //             ), onPressed: () {  },
-                        //         )),
                       ),
                     ),
-
-                    /////////// TextFormField Email
-                    // Container(
-                    //   padding: const EdgeInsets.fromLTRB(0, 10, 10, 0),
-                    //   child: TextFormField(
-                    //     validator: (value) {
-                    //       if (value == null || value.isEmpty) {
-                    //         return 'Chưa nhập Email';
-                    //       } else if (RegExp(
-                    //                   r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$')
-                    //               .hasMatch(value) ==
-                    //           false) {
-                    //         return 'Email không hợp lệ';
-                    //       }
-                    //       return null;
-                    //     },
-                    //     // textInputAction: TextInputAction.continueAction,
-                    //     style: const TextStyle(color: Colors.white),
-                    //     cursorColor: Colors.white,
-                    //     decoration: InputDecoration(
-                    //       border: OutlineInputBorder(
-                    //         borderRadius: BorderRadius.circular(10.0),
-                    //       ),
-                    //       enabledBorder: const OutlineInputBorder(
-                    //         borderSide: BorderSide(
-                    //             width: 1,
-                    //             color: Color.fromARGB(
-                    //                 255, 255, 255, 255)), //<-- SEE HERE
-                    //       ),
-                    //       focusedBorder: const OutlineInputBorder(
-                    //         borderSide:
-                    //             BorderSide(width: 1, color: Colors.white),
-                    //       ),
-                    //       errorBorder: const OutlineInputBorder(
-                    //         borderSide: BorderSide(
-                    //             width: 1,
-                    //             color: Color.fromARGB(
-                    //                 255, 255, 255, 255)), //<-- SEE HERE
-                    //       ),
-                    //       labelStyle: const TextStyle(
-                    //         color: Color.fromARGB(
-                    //             255, 255, 255, 255), //<-- SEE HERE
-                    //       ),
-                    //       labelText: 'Email',
-                    //     ),
-                    //   ),
-                    // ),
-
-                    // /////////// TextFormField Mật khẩu
-                    // Container(
-                    //   padding: const EdgeInsets.fromLTRB(0, 10, 10, 0),
-                    //   child: TextFormField(
-                    //     keyboardType: TextInputType.text,
-                    //     //  controller: _visiblePassword,
-                    //     obscureText:
-                    //         !_visiblePassword, //This will obscure text dynamically
-                    //     validator: (value) {
-                    //       if (value == null || value.isEmpty) {
-                    //         return 'Chưa nhập mật khẩu';
-                    //       }
-                    //       return null;
-                    //     },
-                    //     // textInputAction: TextInputAction.continueAction,
-                    //     style: const TextStyle(color: Colors.white),
-                    //     cursorColor: Colors.white,
-                    //     decoration: InputDecoration(
-                    //       suffixIcon: IconButton(
-                    //         icon: Icon(
-                    //           // Based on passwordVisible state choose the icon
-                    //           _visiblePassword
-                    //               ? Icons.visibility
-                    //               : Icons.visibility_off,
-                    //           color: Colors.white,
-                    //         ),
-                    //         onPressed: () {
-                    //           // Update the state i.e. toogle the state of passwordVisible variable
-                    //           setState(() {
-                    //             _visiblePassword = !_visiblePassword;
-                    //           });
-                    //         },
-                    //       ),
-                    //       border: OutlineInputBorder(
-                    //         borderRadius: BorderRadius.circular(10.0),
-                    //       ),
-                    //       enabledBorder: const OutlineInputBorder(
-                    //         borderSide: BorderSide(
-                    //             width: 1,
-                    //             color: Color.fromARGB(
-                    //                 255, 255, 255, 255)), //<-- SEE HERE
-                    //       ),
-                    //       focusedBorder: const OutlineInputBorder(
-                    //         borderSide:
-                    //             BorderSide(width: 1, color: Colors.white),
-                    //       ),
-                    //       labelStyle: const TextStyle(
-                    //         color: Color.fromARGB(
-                    //             255, 255, 255, 255), //<-- SEE HERE
-                    //       ),
-                    //       labelText: 'Mật khẩu',
-                    //     ),
-                    //   ),
-                    // ),
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,

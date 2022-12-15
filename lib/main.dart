@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mangxahoi/pages/feeds/feeds.dart';
+import 'package:mangxahoi/pages/feeds/feedPage.dart';
 import 'package:mangxahoi/pages/login/forgetPass.dart';
 import 'package:mangxahoi/pages/login/formRegister/registerPage.dart';
 import 'package:mangxahoi/pages/login/formRegister/registerSussess.dart';
@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        scaffoldBackgroundColor: const Color.fromARGB(255, 207, 207, 207),
       ),
       home: const loginPage(),
       initialRoute: '/',

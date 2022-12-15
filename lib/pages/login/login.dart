@@ -10,7 +10,7 @@ class loginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double setpaddingthucong = MediaQuery.of(context).size.width;
+    double setWidththucong = MediaQuery.of(context).size.width;
     double setHeightThuCong = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
@@ -23,10 +23,10 @@ class loginPage extends StatelessWidget {
           ),
           child: Padding(
             padding: EdgeInsets.only(
-                top: setpaddingthucong * 0.1,
-                bottom: setpaddingthucong * 0.05,
-                left: setpaddingthucong * 0.05,
-                right: setpaddingthucong * 0.05),
+                top: setWidththucong * 0.1,
+                bottom: setWidththucong * 0.05,
+                left: setWidththucong * 0.05,
+                right: setWidththucong * 0.05),
             child: Container(
               child: Center(
                 child: Column(
@@ -39,7 +39,7 @@ class loginPage extends StatelessWidget {
                     //////// login recented
                     const loginRecented(),
                     Padding(
-                      padding: EdgeInsets.all(setpaddingthucong * 0.1),
+                      padding: EdgeInsets.all(setWidththucong * 0.1),
                       child: const formLogin(),
                     )
                   ],
