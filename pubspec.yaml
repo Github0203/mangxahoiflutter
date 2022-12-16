@@ -41,6 +41,9 @@ dependencies:
   circular_countdown_timer: ^0.2.3
   circular_countdown: ^2.1.0
   readmore: ^2.2.0
+  carousel_slider: ^4.2.1
+  emoji_picker_flutter: ^1.5.1
+  flutter_reaction_button: ^2.0.1+2
 
   
 
@@ -89,6 +92,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets: 
     - assets/png/
+    - assets/images/
     - packages/country_state_city_pro/assets/country.json
     - packages/country_state_city_pro/assets/state.json
     - packages/country_state_city_pro/assets/city.json

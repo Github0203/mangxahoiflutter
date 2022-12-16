@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mangxahoi/home_page.dart';
+import 'package:mangxahoi/pages/feeds/feedPage.dart';
 
 // ignore: camel_case_types
 
@@ -13,7 +14,7 @@ class icon_Logo extends StatelessWidget {
         child: GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+            context, MaterialPageRoute(builder: (context) => const feedHome()));
       }, // Image tapped
       child: Image.asset(
         'assets/png/logo.png',
@@ -753,8 +754,7 @@ class icon_dong extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        Navigator.of(context).pop();
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_dong.png',
@@ -904,10 +904,10 @@ class icon_like extends StatelessWidget {
     // ignore: avoid_unnecessary_containers
     return Container(
         child: GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
-      }, // Image tapped
+      // onTap: () {
+      //   Navigator.push(
+      //       context, MaterialPageRoute(builder: (context) => const HomePage()));
+      // }, // Image tapped
       child: Image.asset(
         'assets/png/icon_like.png',
       ),
@@ -923,10 +923,10 @@ class icon_likemauxanh extends StatelessWidget {
     // ignore: avoid_unnecessary_containers
     return Container(
         child: GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
-      }, // Image tapped
+      // onTap: () {
+      //   Navigator.push(
+      //       context, MaterialPageRoute(builder: (context) => const HomePage()));
+      // }, // Image tapped
       child: Image.asset(
         'assets/png/icon_likemauxanh.png',
       ),
@@ -1646,8 +1646,7 @@ class icon_dongthumb extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        Navigator.of(context).pop();
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_dongthumb.png',

@@ -27,16 +27,15 @@ class _feedHomeState extends State<feedHome> {
 
   @override
   Widget build(BuildContext context) {
-    double setweidththucong = MediaQuery.of(context).size.width;
+    double setwidththucong = MediaQuery.of(context).size.width;
     double setHeightThuCong = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: <Widget>[
           SizedBox(
-              width: setweidththucong,
+              width: setwidththucong,
               child: const Padding(
                 padding: EdgeInsets.only(left: 8.0, right: 8.0),
                 child: appBarComponent(),
@@ -46,7 +45,7 @@ class _feedHomeState extends State<feedHome> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          width: setweidththucong,
+          width: setwidththucong,
           decoration: const BoxDecoration(
             color: Color.fromARGB(255, 207, 207, 207),
           ),

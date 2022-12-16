@@ -46,6 +46,16 @@ class feedComponents extends StatelessWidget {
             child: const shortcut3cuc(),
           ),
           const postComponent(),
+          const SizedBox(
+            height: 30,
+          ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 40),
+              child: CustomerTextN.textButton18Medium(
+                  'Không còn bài viết nào khác'),
+            ),
+          )
         ],
       ),
     );
