@@ -34,32 +34,35 @@ class _CommentsState extends State<Comments> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(height: 20),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: widget.comments.isEmpty
-                ? const Center(
-                    child: Text(
-                      'No comment yet',
-                      style: TextStyle(
-                        fontSize: 18,
+    return Container(
+      height: 500,
+      child: Column(
+        children: [
+          const SizedBox(height: 20),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: widget.comments.isEmpty
+                  ? const Center(
+                      child: Text(
+                        'Hãy là người bình luận đầu tiên nhé 🥰',
+                        style: TextStyle(
+                          fontSize: 18,
+                        ),
                       ),
+                    )
+                  : ListView.builder(
+                      physics: const BouncingScrollPhysics(),
+                      itemCount: widget.comments.length,
+                      itemBuilder: (context, index) {
+                        return buildComment(widget.comments[index]);
+                      },
                     ),
-                  )
-                : ListView.builder(
-                    physics: const BouncingScrollPhysics(),
-                    itemCount: widget.comments.length,
-                    itemBuilder: (context, index) {
-                      return buildComment(widget.comments[index]);
-                    },
-                  ),
+            ),
           ),
-        ),
-        buildCommentField(),
-      ],
+          buildCommentField(),
+        ],
+      ),
     );
   }
 
@@ -139,7 +142,7 @@ class _CommentsState extends State<Comments> {
           fontSize: 18,
         ),
         decoration: InputDecoration(
-          hintText: 'Write a comment...',
+          hintText: 'Viết gì đó đi...',
           border: InputBorder.none,
           icon: const SizedBox(
             width: 10,

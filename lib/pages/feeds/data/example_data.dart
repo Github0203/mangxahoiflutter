@@ -72,12 +72,12 @@ final reactions = [
   ),
   Reaction<String>(
     value: 'Thích',
-    title: _buildTitle('Thích'),
-    previewIcon: _buildReactionsPreviewIcon('assets/gif/thich.gif'),
+    title: _buildTitle('Thương thương'),
+    previewIcon: _buildReactionsPreviewIcon('assets/gif/thungthung.gif'),
     icon: _buildReactionsIcon(
-      'assets/gif/thich.gif',
+      'assets/gif/thungthung.gif',
       const Text(
-        'Thích',
+        'Thương thương',
         style: TextStyle(
           color: Color(0XFF3b5998),
         ),

@@ -12,37 +12,40 @@ class loginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double setWidththucong = MediaQuery.of(context).size.width;
     double setHeightThuCong = MediaQuery.of(context).size.height;
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/png/hinhnen.png"),
-              fit: BoxFit.fill,
+    return Container(
+      decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/png/hinhnen.png"),
+                fit: BoxFit.fill,
+              ),
             ),
-          ),
-          child: Padding(
-            padding: EdgeInsets.only(
-                top: setWidththucong * 0.1,
-                bottom: setWidththucong * 0.05,
-                left: setWidththucong * 0.05,
-                right: setWidththucong * 0.05),
-            child: Container(
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    //////// logo
-                    const iconLogoComponent(),
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Container(
+            
+            child: Padding(
+              padding: EdgeInsets.only(
+                  top: setWidththucong * 0.1,
+                  bottom: setWidththucong * 0.05,
+                  left: setWidththucong * 0.05,
+                  right: setWidththucong * 0.05),
+              child: Container(
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      //////// logo
+                      const iconLogoComponent(),
 
-                    //////// login recented
-                    const loginRecented(),
-                    Padding(
-                      padding: EdgeInsets.all(setWidththucong * 0.1),
-                      child: const formLogin(),
-                    )
-                  ],
+                      //////// login recented
+                      const loginRecented(),
+                      Padding(
+                        padding: EdgeInsets.all(setWidththucong * 0.1),
+                        child: const formLogin(),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

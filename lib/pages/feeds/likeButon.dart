@@ -19,7 +19,19 @@ class _likeButtonState extends State<likeButton> {
           clicked = !clicked;
         });
       },
-      child: clicked ? const icon_like_gif() : const icon_like(),
+      child: clicked ? 
+      Row(
+        children: const <Widget>[
+          icon_like_gif(),
+          Padding(
+            padding: EdgeInsets.only(left: 8.0),
+            child: Text('Thích',style: TextStyle(
+            color: Color(0XFF3b5998),
+        ),),
+          ),
+        ],
+      )
+       : const icon_like(),
     );
   }
 }
