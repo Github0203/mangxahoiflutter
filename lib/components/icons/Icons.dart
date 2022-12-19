@@ -1692,3 +1692,18 @@ class icon_ava extends StatelessWidget {
     ));
   }
 }
+
+// Icon icon_ava
+class icon_like_gif extends StatelessWidget {
+  const icon_like_gif({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+      width: 30,
+      child: Image.asset(
+        'assets/gif/thich.gif',
+      ),
+    );
+  }
+}

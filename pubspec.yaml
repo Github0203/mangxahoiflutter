@@ -93,6 +93,7 @@ flutter:
   assets: 
     - assets/png/
     - assets/images/
+    - assets/gif/
     - packages/country_state_city_pro/assets/country.json
     - packages/country_state_city_pro/assets/state.json
     - packages/country_state_city_pro/assets/city.json

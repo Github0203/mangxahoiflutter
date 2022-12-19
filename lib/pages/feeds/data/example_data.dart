@@ -43,13 +43,13 @@ final defaultInitialReaction = Reaction<String>(
 
 final reactions = [
   Reaction<String>(
-    value: 'Happy',
-    title: _buildTitle('Happy'),
-    previewIcon: _buildReactionsPreviewIcon('assets/images/happy.png'),
+    value: 'Thích',
+    title: _buildTitle('Thích'),
+    previewIcon: _buildReactionsPreviewIcon('assets/gif/thich.gif'),
     icon: _buildReactionsIcon(
-      'assets/images/happy.png',
+      'assets/gif/thich.gif',
       const Text(
-        'Happy',
+        'Thích',
         style: TextStyle(
           color: Color(0XFF3b5998),
         ),
@@ -57,13 +57,13 @@ final reactions = [
     ),
   ),
   Reaction<String>(
-    value: 'Angry',
-    title: _buildTitle('Angry'),
-    previewIcon: _buildReactionsPreviewIcon('assets/images/angry.png'),
+    value: 'Trái tim',
+    title: _buildTitle('Trái tim'),
+    previewIcon: _buildReactionsPreviewIcon('assets/gif/traitim.gif'),
     icon: _buildReactionsIcon(
-      'assets/images/angry.png',
+      'assets/gif/traitim.gif',
       const Text(
-        'Angry',
+        'Trái tim',
         style: TextStyle(
           color: Color(0XFFed5168),
         ),
@@ -71,27 +71,42 @@ final reactions = [
     ),
   ),
   Reaction<String>(
-    value: 'In love',
-    title: _buildTitle('In love'),
-    previewIcon: _buildReactionsPreviewIcon('assets/images/in-love.png'),
+    value: 'Thích',
+    title: _buildTitle('Thích'),
+    previewIcon: _buildReactionsPreviewIcon('assets/gif/thich.gif'),
     icon: _buildReactionsIcon(
-      'assets/images/in-love.png',
+      'assets/gif/thich.gif',
       const Text(
-        'In love',
+        'Thích',
         style: TextStyle(
-          color: Color(0XFFffda6b),
+          color: Color(0XFF3b5998),
         ),
       ),
     ),
   ),
+  // Reaction<String>(
+  //   value: 'Thương thương',
+  //   title: _buildTitle('Thương thương'),
+  //   previewIcon: _buildReactionsPreviewIcon('assets/images/sad.png'),
+  //   icon: _buildReactionsIcon(
+  //     'assets/images/sad.png',
+  //     const Text(
+  //       'Thương thương',
+  //       style: TextStyle(
+  //         color: Color(0XFFffda6b),
+  //         fontSize: 17,
+  //       ),
+  //     ),
+  //   ),
+  // ),
   Reaction<String>(
-    value: 'Sad',
-    title: _buildTitle('Sad'),
+    value: 'Buồn',
+    title: _buildTitle('Buồn'),
     previewIcon: _buildReactionsPreviewIcon('assets/images/sad.png'),
     icon: _buildReactionsIcon(
       'assets/images/sad.png',
       const Text(
-        'Sad',
+        'Buồn',
         style: TextStyle(
           color: Color(0XFFffda6b),
         ),
@@ -99,13 +114,13 @@ final reactions = [
     ),
   ),
   Reaction<String>(
-    value: 'Surprised',
-    title: _buildTitle('Surprised'),
+    value: 'Ngạc nhiên',
+    title: _buildTitle('Ngạc nhiên'),
     previewIcon: _buildReactionsPreviewIcon('assets/images/surprised.png'),
     icon: _buildReactionsIcon(
       'assets/images/surprised.png',
       const Text(
-        'Surprised',
+        'Ngạc nhiên',
         style: TextStyle(
           color: Color(0XFFffda6b),
         ),
@@ -113,13 +128,13 @@ final reactions = [
     ),
   ),
   Reaction<String>(
-    value: 'Mad',
-    title: _buildTitle('Mad'),
+    value: 'Giận dữ',
+    title: _buildTitle('Giận dữ'),
     previewIcon: _buildReactionsPreviewIcon('assets/images/mad.png'),
     icon: _buildReactionsIcon(
       'assets/images/mad.png',
       const Text(
-        'Mad',
+        'Giận dữ',
         style: TextStyle(
           color: Color(0XFFf05766),
         ),

@@ -43,7 +43,7 @@ class _ItemState extends State<ItemEmojiN> with AutomaticKeepAliveClientMixin {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SizedBox(
-          width: MediaQuery.of(context).size.width * .2,
+          width: MediaQuery.of(context).size.width * 0.2,
           child: FittedBox(
             fit: BoxFit.scaleDown,
             child: ReactionButtonToggle<String>(

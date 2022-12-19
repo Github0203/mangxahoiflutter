@@ -9,16 +9,17 @@ class likeButton extends StatefulWidget {
 }
 
 class _likeButtonState extends State<likeButton> {
+  bool clicked = false;
+
   @override
   Widget build(BuildContext context) {
-    bool clicked = false;
     return GestureDetector(
       onTap: () {
         setState(() {
-          clicked = true;
+          clicked = !clicked;
         });
       },
-      child: clicked ? const icon_likemauxanh() : const icon_like(),
+      child: clicked ? const icon_like_gif() : const icon_like(),
     );
   }
 }
