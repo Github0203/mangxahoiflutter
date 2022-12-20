@@ -102,9 +102,9 @@ final reactions = [
   Reaction<String>(
     value: 'Buồn',
     title: _buildTitle('Buồn'),
-    previewIcon: _buildReactionsPreviewIcon('assets/images/sad.png'),
+    previewIcon: _buildReactionsPreviewIcon('assets/gif/buon.gif'),
     icon: _buildReactionsIcon(
-      'assets/images/sad.png',
+      'assets/gif/buon.gif',
       const Text(
         'Buồn',
         style: TextStyle(
@@ -116,9 +116,9 @@ final reactions = [
   Reaction<String>(
     value: 'Ngạc nhiên',
     title: _buildTitle('Ngạc nhiên'),
-    previewIcon: _buildReactionsPreviewIcon('assets/images/surprised.png'),
+    previewIcon: _buildReactionsPreviewIcon('assets/gif/ngacnhien.gif'),
     icon: _buildReactionsIcon(
-      'assets/images/surprised.png',
+      'assets/gif/ngacnhien.gif',
       const Text(
         'Ngạc nhiên',
         style: TextStyle(
@@ -130,9 +130,9 @@ final reactions = [
   Reaction<String>(
     value: 'Giận dữ',
     title: _buildTitle('Giận dữ'),
-    previewIcon: _buildReactionsPreviewIcon('assets/images/mad.png'),
+    previewIcon: _buildReactionsPreviewIcon('assets/gif/giangiu.gif'),
     icon: _buildReactionsIcon(
-      'assets/images/mad.png',
+      'assets/gif/giangiu.gif',
       const Text(
         'Giận dữ',
         style: TextStyle(
@@ -201,7 +201,7 @@ Container _buildReactionsIcon(String path, Text text) {
     color: Colors.transparent,
     child: Row(
       children: <Widget>[
-        Image.asset(path, height: 20),
+        Image.asset(path, height: 35),
         const SizedBox(width: 5),
         text,
       ],

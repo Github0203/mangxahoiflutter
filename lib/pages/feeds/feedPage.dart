@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mangxahoi/components/icons/Icons.dart';
+import 'package:mangxahoi/pages/createPost/createPost.dart';
 import 'package:mangxahoi/pages/feeds/appBAr/appBarComponent.dart';
 import 'package:mangxahoi/pages/feeds/feedComponents.dart';
+import 'package:flutter/cupertino.dart';
 
 class feedHome extends StatefulWidget {
   const feedHome({super.key});
@@ -126,7 +128,12 @@ class _feedHomeState extends State<feedHome> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => {},
+        onPressed: () => {
+          // Navigator.push(context,
+          //     MaterialPageRoute(builder: (context) => const createPost()))
+          Navigator.push(
+              context, CupertinoPageRoute(builder: (_) => const createPost()))
+        },
         tooltip: 'Increment Counter',
         child: const Icon(Icons.add),
       ),

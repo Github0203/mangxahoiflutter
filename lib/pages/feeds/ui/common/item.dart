@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_reaction_button/flutter_reaction_button.dart';
+import 'package:mangxahoi/components/icons/Icons.dart';
+import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 
 import '../../data/example_data.dart' as example;
 import '../../models/comment.dart';
@@ -30,24 +32,141 @@ class _ItemState extends State<ItemEmojiN> with AutomaticKeepAliveClientMixin {
 
   void _showBottomSheetShare(BuildContext context) {
     showAdaptiveActionSheet(
- context: context,
- title: const Text('Chia sẽ'),
- androidBorderRadius: 30,
- actions: <BottomSheetAction>[
-    BottomSheetAction(title: const Text('Item 1'), onPressed: (context) {}),
-    BottomSheetAction(title: const Text('Item 2'), onPressed: (context) {}),
-    BottomSheetAction(title: const Text('Item 3'), onPressed: (context) {}),
- ],
- cancelAction: CancelAction(title: const Text('Đóng')),// onPressed parameter is optional by default will dismiss the ActionSheet
-);
+      context: context,
+      title: const Text('Chia sẽ'),
+      androidBorderRadius: 30,
+      actions: <BottomSheetAction>[
+        BottomSheetAction(
+            title: Container(
+              child: Row(children: <Widget>[
+                Container(width: 20, child: const icon_chiase()),
+                Padding(
+                  padding: const EdgeInsets.only(left: 5.0),
+                  child: CustomerTextN.textButton16Normal(
+                      'Chia sẽ lên bản tin của bạn'),
+                )
+              ]),
+            ),
+            onPressed: (context) {}),
+        BottomSheetAction(
+            title: Row(children: <Widget>[
+              Container(width: 20, child: const icon_guibangtinnhan()),
+              Padding(
+                padding: const EdgeInsets.only(left: 5.0),
+                child: CustomerTextN.textButton16Normal('Gửi bằng tin nhắn'),
+              )
+            ]),
+            onPressed: (context) {}),
+        BottomSheetAction(
+            title: Row(children: <Widget>[
+              Container(width: 20, child: const icon_nhom()),
+              Padding(
+                padding: const EdgeInsets.only(left: 5.0),
+                child: CustomerTextN.textButton16Normal('Chia sẽ lên nhóm'),
+              )
+            ]),
+            onPressed: (context) {}),
+        BottomSheetAction(
+            title: Row(children: <Widget>[
+              Container(width: 20, child: const icon_chiasefacebook()),
+              Padding(
+                padding: const EdgeInsets.only(left: 5.0),
+                child: CustomerTextN.textButton16Normal('Chia sẽ lên Facebook'),
+              )
+            ]),
+            onPressed: (context) {}),
+        BottomSheetAction(
+            title: Row(children: <Widget>[
+              Container(width: 20, child: const icon_zalo()),
+              Padding(
+                padding: const EdgeInsets.only(left: 5.0),
+                child: CustomerTextN.textButton16Normal('Chia sẽ lên Zalo'),
+              )
+            ]),
+            onPressed: (context) {}),
+        BottomSheetAction(
+            title: Row(children: <Widget>[
+              Container(width: 20, child: const icon_lienketchiase()),
+              Padding(
+                padding: const EdgeInsets.only(left: 5.0),
+                child: CustomerTextN.textButton16Normal('Sao chép liên kết'),
+              )
+            ]),
+            onPressed: (context) {}),
+      ],
+      cancelAction: CancelAction(
+          title: CustomerTextN.textButton16Normal(
+              'Đóng')), // onPressed parameter is optional by default will dismiss the ActionSheet
+    );
   }
 
-    void displayBottomSheet(BuildContext context) {
+  void _showPeopleShare(BuildContext context) {
+    showAdaptiveActionSheet(
+      context: context,
+      title: const Text('Đăng bình luận với tư cách là'),
+      androidBorderRadius: 30,
+      actions: <BottomSheetAction>[
+        BottomSheetAction(
+            title: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: Row(children: <Widget>[
+                    Container(
+                        width: 40,
+                        height: 40,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: NetworkImage(
+                                    'https://images.unsplash.com/photo-1670441384415-4680ddc2017e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')))),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5.0),
+                      child: CustomerTextN.textButton16Medium('Tên người dùng'),
+                    )
+                  ]),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: CustomerTextN.textButton18Medium('Trang'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: Row(children: <Widget>[
+                    Container(
+                        width: 40,
+                        height: 40,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: NetworkImage(
+                                    'https://images.unsplash.com/photo-1670441384415-4680ddc2017e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')))),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5.0),
+                      child: CustomerTextN.textButton16Medium('Tên trang'),
+                    )
+                  ]),
+                ),
+              ],
+            ),
+            onPressed: (context) {}),
+      ],
+      cancelAction: CancelAction(
+          title: CustomerTextN.textButton16Medium(
+              'Đóng')), // onPressed parameter is optional by default will dismiss the ActionSheet
+    );
+  }
+
+  void displayBottomSheet(BuildContext context) {
     showModalBottomSheet(
         context: context,
         builder: (ctx) {
           return Container(
-            height: MediaQuery.of(context).size.height  * 0.4,
+            height: MediaQuery.of(context).size.height * 0.4,
             child: const Center(
               child: Text("Welcome to AndroidVille!"),
             ),
@@ -57,15 +176,15 @@ class _ItemState extends State<ItemEmojiN> with AutomaticKeepAliveClientMixin {
 
   @override
   Widget build(BuildContext context) {
+    double setwidthThuCong = MediaQuery.of(context).size.width;
     super.build(context);
     return Container(
-      width: MediaQuery.of(context).size.width*0.9,
+      width: MediaQuery.of(context).size.width * 0.95,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
-            // width: MediaQuery.of(context).size.width * 0.2,
             child: FittedBox(
               fit: BoxFit.scaleDown,
               child: ReactionButtonToggle<String>(
@@ -120,10 +239,28 @@ class _ItemState extends State<ItemEmojiN> with AutomaticKeepAliveClientMixin {
                 ),
                 const SizedBox(width: 5),
                 Text(
-                  'Share',
+                  'Chia sẽ',
                   style: TextStyle(
                     fontSize: 17,
                     color: Colors.grey[600],
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () => _showPeopleShare(context),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 5),
+                    child: Row(children: <Widget>[
+                      Container(
+                        margin: const EdgeInsets.only(left: 5, right: 5),
+                        width: 15,
+                        height: 15,
+                        child: const CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/png/icon_ava.png'),
+                        ),
+                      ),
+                      const icon_muiten()
+                    ]),
                   ),
                 ),
               ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mangxahoi/pages/createPost/appBarCreatePost.dart';
 import 'package:mangxahoi/pages/feeds/feedPage.dart';
 import 'package:mangxahoi/pages/login/forgetPass.dart';
 import 'package:mangxahoi/pages/login/formRegister/registerPage.dart';
@@ -9,10 +10,10 @@ void main() {
   runApp(const MyApp());
 }
 
- ThemeData _baseTheme = ThemeData(
-   fontFamily: "Roboto",
-   canvasColor: Colors.transparent,
-  );
+ThemeData _baseTheme = ThemeData(
+  fontFamily: "Roboto",
+  canvasColor: Colors.transparent,
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -53,6 +54,7 @@ class MyApp extends StatelessWidget {
         '/createaccount': (context) => const registerPage(),
         '/registersussess': (context) => const registerSussess(),
         '/feed': (context) => const feedHome(),
+        '/createpost': (context) => const appBarCreatePost(),
       },
     );
   }

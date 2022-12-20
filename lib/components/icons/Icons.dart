@@ -125,14 +125,8 @@ class icon_bacham extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: avoid_unnecessary_containers
     return Container(
-        child: GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
-      }, // Image tapped
-      child: Image.asset(
-        'assets/png/icon_bacham.png',
-      ),
+        child: Image.asset(
+      'assets/png/icon_bacham.png',
     ));
   }
 }
@@ -1056,10 +1050,6 @@ class icon_muiten extends StatelessWidget {
     // ignore: avoid_unnecessary_containers
     return Container(
         child: GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
-      }, // Image tapped
       child: Image.asset(
         'assets/png/icon_muiten.png',
       ),
@@ -1511,14 +1501,8 @@ class icon_trove extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: avoid_unnecessary_containers
     return Container(
-        child: GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
-      }, // Image tapped
-      child: Image.asset(
-        'assets/png/icon_trove.png',
-      ),
+        child: Image.asset(
+      'assets/png/icon_trove.png',
     ));
   }
 }
@@ -1703,6 +1687,126 @@ class icon_like_gif extends StatelessWidget {
       width: 30,
       child: Image.asset(
         'assets/gif/thich.gif',
+      ),
+    );
+  }
+}
+
+// Icon icon_guibangtinnhan
+class icon_guibangtinnhan extends StatelessWidget {
+  const icon_guibangtinnhan({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+      width: 30,
+      child: Image.asset(
+        'assets/png/icon_guibangtinnhan.png',
+      ),
+    );
+  }
+}
+
+// Icon icon_zalo
+class icon_zalo extends StatelessWidget {
+  const icon_zalo({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+      width: 30,
+      child: Image.asset(
+        'assets/png/icon_zalo.png',
+      ),
+    );
+  }
+}
+
+// Icon icon_lienketchiase
+class icon_lienketchiase extends StatelessWidget {
+  const icon_lienketchiase({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+      width: 30,
+      child: Image.asset(
+        'assets/png/icon_lienketchiase.png',
+      ),
+    );
+  }
+}
+
+// Icon icon_bokholuutru
+class icon_bokholuutru extends StatelessWidget {
+  const icon_bokholuutru({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+      width: 30,
+      child: Image.asset(
+        'assets/png/icon_bokholuutru.png',
+      ),
+    );
+  }
+}
+
+// Icon icon_tatthongbao
+class icon_tatthongbao extends StatelessWidget {
+  const icon_tatthongbao({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+      width: 30,
+      child: Image.asset(
+        'assets/png/icon_tatthongbao.png',
+      ),
+    );
+  }
+}
+
+// Icon icon_huytheodoi
+class icon_huytheodoi extends StatelessWidget {
+  const icon_huytheodoi({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+      width: 30,
+      child: Image.asset(
+        'assets/png/icon_huytheodoi.png',
+      ),
+    );
+  }
+}
+
+// Icon icon_gothe
+class icon_gothe extends StatelessWidget {
+  const icon_gothe({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+      width: 30,
+      child: Image.asset(
+        'assets/png/icon_gothe.png',
+      ),
+    );
+  }
+}
+
+// Icon icon_baocao
+class icon_baocao extends StatelessWidget {
+  const icon_baocao({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+      width: 30,
+      child: Image.asset(
+        'assets/png/icon_baocao.png',
       ),
     );
   }

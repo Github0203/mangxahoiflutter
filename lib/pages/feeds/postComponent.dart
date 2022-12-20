@@ -1,3 +1,4 @@
+import 'package:adaptive_action_sheet/adaptive_action_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:mangxahoi/components/icons/Icons.dart';
 import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
@@ -84,7 +85,96 @@ class postComponent extends StatelessWidget {
                   ),
                 ],
               ),
-              const icon_bacham(),
+              GestureDetector(
+                  onTap: () => showAdaptiveActionSheet(
+                        context: context,
+                        title: const Text('Tùy chọn'),
+                        androidBorderRadius: 30,
+                        actions: <BottomSheetAction>[
+                          BottomSheetAction(
+                              title: Container(
+                                child: Row(children: <Widget>[
+                                  Container(
+                                      width: 20, child: const icon_kholuutru()),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 5.0),
+                                    child: CustomerTextN.textButton16Normal(
+                                        'Lưu bài viết'),
+                                  )
+                                ]),
+                              ),
+                              onPressed: (context) {}),
+                          BottomSheetAction(
+                              title: Row(children: <Widget>[
+                                Container(
+                                    width: 20, child: const icon_bokholuutru()),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 5.0),
+                                  child: CustomerTextN.textButton16Normal(
+                                      'Bỏ lưu bài viết'),
+                                )
+                              ]),
+                              onPressed: (context) {}),
+                          BottomSheetAction(
+                              title: Row(children: <Widget>[
+                                Container(
+                                    width: 20, child: const icon_tatthongbao()),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 5.0),
+                                  child: CustomerTextN.textButton16Normal(
+                                      'Tắt thong báo từ “Tên của người bạn”'),
+                                )
+                              ]),
+                              onPressed: (context) {}),
+                          BottomSheetAction(
+                              title: Row(children: <Widget>[
+                                Container(
+                                    width: 20, child: const icon_huytheodoi()),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 5.0),
+                                  child: CustomerTextN.textButton16Normal(
+                                      'Hủy theo dõi “Tên của người bạn”'),
+                                )
+                              ]),
+                              onPressed: (context) {}),
+                          BottomSheetAction(
+                              title: Row(children: <Widget>[
+                                Container(width: 20, child: const icon_gothe()),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 5.0),
+                                  child: CustomerTextN.textButton16Normal(
+                                      'Gỡ thẻ bài viết (nếu được gắn thẻ)'),
+                                )
+                              ]),
+                              onPressed: (context) {}),
+                          BottomSheetAction(
+                              title: Row(children: <Widget>[
+                                Container(
+                                    width: 20, child: const icon_xoataikhoan()),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 5.0),
+                                  child: CustomerTextN.textButton16Normal(
+                                      'Cho vào thùng rác'),
+                                )
+                              ]),
+                              onPressed: (context) {}),
+                          BottomSheetAction(
+                              title: Row(children: <Widget>[
+                                Container(
+                                    width: 20, child: const icon_baocao()),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 5.0),
+                                  child: CustomerTextN.textButton16Normal(
+                                      'Báo cáo về bài viết này'),
+                                )
+                              ]),
+                              onPressed: (context) {}),
+                        ],
+                        cancelAction: CancelAction(
+                            title: CustomerTextN.textButton16Normal(
+                                'Đóng')), // onPressed parameter is optional by default will dismiss the ActionSheet
+                      ),
+                  child: const icon_bacham()),
             ],
           ),
           Padding(
@@ -100,6 +190,8 @@ class postComponent extends StatelessWidget {
                   trimExpandedText: 'Ẩn bớt',
                   moreStyle:
                       TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  lessStyle:
+                      TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -108,7 +200,7 @@ class postComponent extends StatelessWidget {
             padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
             child: listImagePost(),
           ),
-          const SizedBox(height: 60),
+          const SizedBox(height: 10),
           const emojiAndshare(),
         ],
       ),

@@ -19,7 +19,8 @@ class listImagePost extends StatelessWidget {
     ];
     return Container(
       width: setweidththucong,
-      height: 200,
+      height: 251,
+      color: Colors.blueAccent,
       child: GridView(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
