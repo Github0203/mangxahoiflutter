@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mangxahoi/components/appBar/appBarBackN.dart';
+import 'package:mangxahoi/components/tabComponent/tabComponent.dart';
 
 class chooseImgFrom extends StatefulWidget {
   const chooseImgFrom({super.key});
@@ -28,20 +29,7 @@ class _chooseImgFromState extends State<chooseImgFrom> {
           // ),
         ],
       ),
-      body: const DefaultTabController(
-        length: 3,
-        child: TabBar(
-          tabs: [
-            Tab(icon: Icon(Icons.directions_car)),
-            Tab(icon: Icon(Icons.directions_car)),
-            Tab(icon: Icon(Icons.directions_transit)),
-            Tab(icon: Icon(Icons.directions_bike)),
-            Tab(icon: Icon(Icons.directions_bike)),
-            Tab(icon: Icon(Icons.directions_bike)),
-            Tab(icon: Icon(Icons.directions_bike)),
-          ],
-        ),
-      ),
+      body: const tabComponent(),
     );
   }
 }
