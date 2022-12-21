@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 import 'package:mangxahoi/home_page.dart';
 
 class homeButton extends StatelessWidget {
@@ -78,5 +79,56 @@ class _SexGioitinhState extends State<SexGioitinh> {
       }).toList(),
     );
     ;
+  }
+}
+
+class CustomerButtonN {
+  static Widget buttonMenuHaveIcon(
+    String title,
+    String label,
+    Widget child,
+  ) {
+    return Row(
+      children: <Widget>[
+        Container(
+          width: 48.0,
+          height: 48.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            color: Colors.black12,
+          ),
+          child:
+              Center(child: Container(width: 26.0, height: 26.0, child: child)),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 10.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              CustomerTextN.textButton13Bold(title),
+              CustomerTextN.textButton13Grey(label),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  static Widget chooseHaveIconandAText(
+    String title,
+    Widget child,
+  ) {
+    return Row(
+      children: <Widget>[
+        Container(
+          width: 30.0,
+          height: 30.0,
+          padding: const EdgeInsets.only(right: 5),
+          child:
+              Center(child: Container(width: 26.0, height: 26.0, child: child)),
+        ),
+        CustomerTextN.textButton13Normal(title),
+      ],
+    );
   }
 }

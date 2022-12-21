@@ -15,11 +15,11 @@ class feedHome extends StatefulWidget {
 class _feedHomeState extends State<feedHome> {
   int _selectedIndex = 0;
 
-  void _onItemTap(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+  // void _onItemTap(int index) {
+  //   setState(() {
+  //     _selectedIndex = index;
+  //   });
+  // }
 
   static const List<Widget> _pages = <Widget>[
     feedComponents(),
@@ -134,7 +134,7 @@ class _feedHomeState extends State<feedHome> {
           Navigator.push(
               context, CupertinoPageRoute(builder: (_) => const createPost()))
         },
-        tooltip: 'Increment Counter',
+        tooltip: 'Tạo bài viết mới',
         child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

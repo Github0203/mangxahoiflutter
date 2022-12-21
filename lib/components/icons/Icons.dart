@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:mangxahoi/home_page.dart';
 import 'package:mangxahoi/pages/feeds/feedPage.dart';
@@ -1500,10 +1502,15 @@ class icon_trove extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: avoid_unnecessary_containers
-    return Container(
-        child: Image.asset(
-      'assets/png/icon_trove.png',
-    ));
+    return GestureDetector(
+      onTap: () {
+        Navigator.pop(context);
+      },
+      child: Container(
+          child: Image.asset(
+        'assets/png/icon_trove.png',
+      )),
+    );
   }
 }
 
@@ -1540,6 +1547,25 @@ class icon_videofeed extends StatelessWidget {
       // }, // Image tapped
       child: Image.asset(
         'assets/png/icon_videofeed.png',
+      ),
+    ));
+  }
+}
+
+// Icon icon_congkhaimenu
+class icon_congkhaimenu extends StatelessWidget {
+  const icon_congkhaimenu({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+        child: GestureDetector(
+      // onTap: () {
+      //   Navigator.push(
+      //       context, MaterialPageRoute(builder: (context) => const HomePage()));
+      // }, // Image tapped
+      child: Image.asset(
+        'assets/png/icon_congkhaimenu.png',
       ),
     ));
   }
@@ -1626,16 +1652,98 @@ class icon_dongthumb extends StatelessWidget {
   const icon_dongthumb({super.key});
   @override
   Widget build(BuildContext context) {
-    // ignore: avoid_unnecessary_containers
-    return Container(
-        child: GestureDetector(
-      onTap: () {
-        Navigator.of(context).pop();
-      }, // Image tapped
-      child: Image.asset(
-        'assets/png/icon_dongthumb.png',
+    return Center(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10.0),
+        child: Container(
+          height: 25.0,
+          width: 25,
+          decoration: BoxDecoration(
+            color: Colors.black.withOpacity(0.1),
+          ),
+          child: Stack(
+            children: [
+              //Blur Effect
+              BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
+                child: Container(),
+              ),
+              //Gradient Effect
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.white.withOpacity(0.20)),
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Colors.white.withOpacity(0.15),
+                        Colors.white.withOpacity(0.05),
+                      ]),
+                ),
+              ),
+              //Child
+              const Center(
+                  child: Icon(
+                Icons.close,
+                size: 15,
+                color: Colors.white,
+              ))
+            ],
+          ),
+        ),
       ),
-    ));
+    );
+  }
+}
+
+// Icon icon_nochoose
+class icon_nochoose extends StatelessWidget {
+  const icon_nochoose({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10.0),
+        child: Container(
+          height: 50.0,
+          width: 50.0,
+          decoration: BoxDecoration(
+            color: Colors.black.withOpacity(0.1),
+          ),
+          child: Stack(
+            children: [
+              //Blur Effect
+              BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
+                child: Container(),
+              ),
+              //Gradient Effect
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.white.withOpacity(0.20)),
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Colors.white.withOpacity(0.15),
+                        Colors.white.withOpacity(0.05),
+                      ]),
+                ),
+              ),
+              //Child
+              const Center(
+                  child: Icon(
+                Icons.cancel_sharp,
+                size: 25,
+                color: Color.fromARGB(144, 255, 255, 255),
+              ))
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
 

@@ -29,6 +29,19 @@ class _ItemState extends State<ItemEmojiN> with AutomaticKeepAliveClientMixin {
   bool get wantKeepAlive => true;
 
   final List<Comment> _comments = [];
+  void _showBottomSheetComments(BuildContext context) {
+    showModalBottomSheet(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      context: context,
+      builder: (context) {
+        return Container(
+            height: MediaQuery.of(context).size.height * 0.8,
+            child: Comments(comments: _comments));
+      },
+    );
+  }
 
   void _showBottomSheetShare(BuildContext context) {
     showAdaptiveActionSheet(
@@ -198,7 +211,7 @@ class _ItemState extends State<ItemEmojiN> with AutomaticKeepAliveClientMixin {
             ),
           ),
           InkWell(
-            onTap: () => displayBottomSheet(context),
+            onTap: () => _showBottomSheetComments(context),
             child: Row(
               children: [
                 Icon(

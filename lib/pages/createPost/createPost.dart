@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:mangxahoi/pages/createPost/appBarCreatePost.dart';
+import 'package:mangxahoi/pages/createPost/createPostDetail.dart';
 
 class createPost extends StatefulWidget {
   const createPost({super.key});
@@ -17,6 +18,7 @@ class _createPostState extends State<createPost> {
     double setheightthucong = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
@@ -30,6 +32,7 @@ class _createPostState extends State<createPost> {
           // ),
         ],
       ),
+      body: const createPostDetail(),
     );
   }
 }

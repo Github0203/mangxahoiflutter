@@ -51,8 +51,29 @@ Future<void> _dialogBuilder(BuildContext context) {
   return showDialog<void>(
     context: context,
     builder: (BuildContext context) {
-      return Stack(
+      return Column(
         children: <Widget>[
+          Container(
+            height: setHeightThuCong * 0.1,
+            child: Positioned.fill(
+              child: Align(
+                alignment: Alignment.topRight,
+                child: Container(
+                    width: setwidththucong,
+                    padding: const EdgeInsets.only(right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.pop(context, true);
+                            },
+                            child: const icon_dongthumb()),
+                      ],
+                    )),
+              ),
+            ),
+          ),
           Container(
             child: AlertDialog(
               backgroundColor: Color.fromARGB(00, 0, 0, 0),
@@ -61,20 +82,6 @@ Future<void> _dialogBuilder(BuildContext context) {
                   height: setHeightThuCong * 0.8,
                   width: setwidththucong,
                   child: BasicDemo()),
-            ),
-          ),
-          Positioned.fill(
-            child: Align(
-              alignment: Alignment.topRight,
-              child: Container(
-                  width: setwidththucong,
-                  padding: const EdgeInsets.only(right: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: const <Widget>[
-                      icon_dongthumb(),
-                    ],
-                  )),
             ),
           ),
         ],
