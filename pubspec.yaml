@@ -46,6 +46,9 @@ dependencies:
   flutter_reaction_button: ^2.0.1+2
   adaptive_action_sheet: ^2.0.2
   scroll_navigation: ^1.3.2
+  image_picker: ^0.8.6
+  video_player: ^2.4.10
+  meta: ^1.7.0
 
   
 
@@ -85,8 +88,11 @@ flutter:
   uses-material-design: true
   plugin:
     platforms:
+      android:
+        package: com.guzram.multiimagepicker
+        pluginClass: MultiImagePickerPlugin
       ios:
-        pluginClass: NativeIosDialogPlugin
+        pluginClass: NativeIosDialogPlugin, MultiImagePickerPlugin
 
   # To add assets to your application, add an assets section, like this:
   # assets:
