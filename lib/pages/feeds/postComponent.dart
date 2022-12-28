@@ -4,6 +4,7 @@ import 'package:mangxahoi/components/icons/Icons.dart';
 import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 import 'package:mangxahoi/pages/feeds/emojiAndshare.dart';
 import 'package:mangxahoi/pages/feeds/listImagePost.dart';
+import 'package:mangxahoi/pages/feeds/listimg.dart';
 import 'package:readmore/readmore.dart';
 
 class postComponent extends StatelessWidget {
@@ -199,6 +200,7 @@ class postComponent extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
             child: listImagePost(),
+            // child: listimg(),
           ),
           const SizedBox(height: 10),
           const emojiAndshare(),

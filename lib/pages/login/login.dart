@@ -12,8 +12,9 @@ class loginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double setWidththucong = MediaQuery.of(context).size.width;
     double setHeightThuCong = MediaQuery.of(context).size.height;
+    double setHeightKeyboard = MediaQuery.of(context).size.height;
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: true,
       body: Stack(children: <Widget>[
         Container(
           height: setHeightThuCong,
@@ -26,31 +27,33 @@ class loginPage extends StatelessWidget {
           ),
         ),
         SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.only(
-                top: setWidththucong * 0.1,
-                bottom: setWidththucong * 0.05,
-                left: setWidththucong * 0.05,
-                right: setWidththucong * 0.05),
-            child: Container(
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    //////// logo
-                    const iconLogoComponent(),
+          child: Column(
+            children: [
+              Container(
+                 padding: EdgeInsets.only(
+                    top: setWidththucong * 0.1,
+                    bottom: setWidththucong * 0.05,
+                    left: setWidththucong * 0.05,
+                    right: setWidththucong * 0.05),
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      //////// logo
+                      const iconLogoComponent(),
 
-                    //////// login recented
-                    const loginRecented(),
-                    Padding(
-                      padding: EdgeInsets.all(setWidththucong * 0.1),
-                      child: const formLogin(),
-                    )
-                  ],
+                      //////// login recented
+                      const loginRecented(),
+                      Padding(
+                        padding: EdgeInsets.all(setWidththucong * 0.1),
+                        child: const formLogin(),
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
+            ],
           ),
         ),
       ]),

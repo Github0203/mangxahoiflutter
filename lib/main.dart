@@ -15,8 +15,8 @@ ThemeData _baseTheme = ThemeData(
   canvasColor: Colors.transparent,
 );
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  class MyApp extends StatelessWidget {
+    const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
