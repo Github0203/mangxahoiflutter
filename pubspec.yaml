@@ -57,6 +57,7 @@ dependencies:
   # freemar_image_picker: ^0.0.3+2
   advance_image_picker: ^0.1.7+1
   intl: ^0.18.0
+  gallery_view: ^1.0.0+1
 
   
 

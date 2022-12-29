@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:mangxahoi/components/chooseimage/chooseImage.dart';
 import 'package:mangxahoi/components/chooseimage/multi_image_picker.dart';
 import 'package:mangxahoi/components/chooseimage/testcm.dart';
-import 'package:mangxahoi/main.dart';
-import 'package:mangxahoi/pages/createPost/getImage.dart';
 import 'package:scroll_navigation/scroll_navigation.dart';
 
 class tabComponent extends StatefulWidget {
@@ -48,9 +46,6 @@ class _tabComponentState extends State<tabComponent> {
                 ),
               );
             },
-          ),
-          Container(
-            child: getImage(),
           ),
           Container(
             child: const CM(),

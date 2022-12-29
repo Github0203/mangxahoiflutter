@@ -199,8 +199,8 @@ class postComponent extends StatelessWidget {
           ),
           const Padding(
             padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-            child: listImagePost(),
-            // child: listimg(),
+            // child: listImagePost(),
+            child: listimg(),
           ),
           const SizedBox(height: 10),
           const emojiAndshare(),
