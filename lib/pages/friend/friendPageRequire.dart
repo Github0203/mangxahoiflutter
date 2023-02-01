@@ -303,6 +303,9 @@ import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 import 'package:mangxahoi/pages/feeds/appBAr/appBarComponent.dart';
 import 'package:mangxahoi/pages/feeds/feedPage.dart';
 import 'package:mangxahoi/pages/friend/friendHome.dart';
+import 'package:mangxahoi/pages/gropus/groupHome.dart';
+import 'package:mangxahoi/pages/main/mainPage.dart';
+import 'package:mangxahoi/pages/personal/personalHome.dart';
 import 'package:mangxahoi/pages/watch/watchHome.dart';
 import 'package:mangxahoi/thuvien/nav_bottom/curved_navigation_bar.dart';
 
@@ -313,7 +316,7 @@ class friendPageRequire extends StatefulWidget {
 }
 
 class _friendPageRequireState extends State<friendPageRequire> {
-  int _page = 0;
+  int _page = 2;
   
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
@@ -328,7 +331,10 @@ class _friendPageRequireState extends State<friendPageRequire> {
         actions: <Widget>[
           _page == 0 ? const appBarHome() 
           :
-          _page == 1 ? const appBarFriend() : const appBarWatch()
+          _page == 1 ? const appBarFriend() :
+          _page == 2 ? const appBarWatch() :
+          _page == 3 ? const appBarFriend() :
+          _page == 4 ? const appBarPersonal() : Container()
           // ),
         ],
       ),
@@ -374,8 +380,8 @@ class _friendPageRequireState extends State<friendPageRequire> {
         _page == 0 ? const feedHome() :
               _page == 1 ? const friendHome() :
               _page == 2 ? const friendPageRequireC() : 
-              _page == 3 ? Container() :
-              _page == 4 ? Container() : Container()
+              _page == 3 ? const groupHome() :
+              _page == 4 ? const personalHome() : Container(),
         );
   }
 }
@@ -519,7 +525,7 @@ class friendPageRequireC extends StatelessWidget {
                       children: <Widget>[
                      Row(
                   children: <Widget>[
-                    AvaterN.img('https://genk.mediacdn.vn/k:thumb_w/640/2015/1-2-1444483204242/nhung-dieu-thu-vi-ve-pikachu-bieu-tuong-cua-pokemon.png', 90.0, 90.0, 100.0),
+                    AvaterN.img('https://genk.mediacdn.vn/k:thumb_w/640/2015/1-2-1444483204242/nhung-dieu-thu-vi-ve-pikachu-bieu-tuong-cua-pokemon.png', 90.0, 90.0, 100.0, '', 0, false),
                     const SizedBox(width:10),
                     Expanded(
           
@@ -554,7 +560,7 @@ class friendPageRequireC extends StatelessWidget {
     )
   ),
                                 child: Row(children: <Widget>[
-                                  AvaterN.img('https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80', 57, 57, 57),
+                                  AvaterN.img('https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80', 57, 57, 57,  '', 0, false),
                                   Padding(
                                     padding: const EdgeInsets.only(left: 5.0),
                                     child: CustomerTextN.textButton20black(

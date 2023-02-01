@@ -192,7 +192,7 @@ class _ItemState extends State<ItemEmojiN> with AutomaticKeepAliveClientMixin {
     double setwidthThuCong = MediaQuery.of(context).size.width;
     super.build(context);
     return Container(
-      width: MediaQuery.of(context).size.width * 0.95,
+      width: MediaQuery.of(context).size.width * 0.9,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,

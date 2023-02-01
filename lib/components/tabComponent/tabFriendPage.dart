@@ -112,7 +112,7 @@ class _FriendtabState extends State<Friendtab> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  AvaterN.img('https://vcdn1-giaitri.vnecdn.net/2020/11/16/doraemon-4436-1605499376.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=vyYUjlQ2YCw-s1EiiY45dQ', 90, 90, 90),
+                  AvaterN.img('https://vcdn1-giaitri.vnecdn.net/2020/11/16/doraemon-4436-1605499376.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=vyYUjlQ2YCw-s1EiiY45dQ', 90, 90, 90,  '', 0, false),
                   const SizedBox(width: 10,),
                    Expanded(
                      child: Column(
@@ -139,7 +139,7 @@ class _FriendtabState extends State<Friendtab> {
     )
   ),
                                 child: Row(children: <Widget>[
-                                  AvaterN.img('https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80', 57, 57, 57),
+                                  AvaterN.img('https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80', 57, 57, 57,  '', 0, false),
                                   Padding(
                                     padding: const EdgeInsets.only(left: 5.0),
                                     child: CustomerTextN.textButton20black(

@@ -103,7 +103,9 @@ import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 import 'package:mangxahoi/pages/feeds/appBAr/appBarComponent.dart';
 import 'package:mangxahoi/pages/feeds/feedPage.dart';
 import 'package:mangxahoi/pages/friend/friendHome.dart';
+import 'package:mangxahoi/pages/gropus/groupHome.dart';
 import 'package:mangxahoi/pages/main/mainPage.dart';
+import 'package:mangxahoi/pages/personal/personalHome.dart';
 import 'package:mangxahoi/pages/watch/watchHome.dart';
 import 'package:mangxahoi/thuvien/nav_bottom/curved_navigation_bar.dart';
 import 'package:mangxahoi/components/bottomBar/bottombar.dart';
@@ -117,7 +119,7 @@ class friendPage extends   StatefulWidget {
 }
 
 class _friendPageState extends State<friendPage> {
-  int _page = 0;
+  int _page = 1;
   // int trang = bottombarC.pageC;  
   
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
@@ -135,7 +137,8 @@ class _friendPageState extends State<friendPage> {
           _page == 0 ? const appBarHome() :
           _page == 1 ? const appBarFriend() : 
           _page == 2 ? const appBarWatch() :
-          _page == 3 ? const appBarGroup() : const appBarWatch()
+          _page == 3 ? const appBarGroup() :
+          _page == 4 ? const appBarPersonal() : Container()
           // ),
         ],
       ),
@@ -191,8 +194,8 @@ class _friendPageState extends State<friendPage> {
         body: _page == 0 ? const feedHome() :
               _page == 1 ? const friendPageC() :
               _page == 2 ? const watchHome() : 
-              _page == 3 ? Container() :
-              _page == 4 ? Container() : Container(),
+              _page == 3 ? const groupHome() :
+              _page == 4 ? const personalHome() : Container(),
         
         );
   }

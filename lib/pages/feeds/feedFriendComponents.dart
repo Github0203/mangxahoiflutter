@@ -129,7 +129,7 @@ class _feedFriendComponentsState extends State<feedFriendComponents> {
                   padding: const EdgeInsets.only(bottom:8.0),
                   child: Row(
                   children: <Widget>[
-                    AvaterN.img('https://genk.mediacdn.vn/k:thumb_w/640/2015/1-2-1444483204242/nhung-dieu-thu-vi-ve-pikachu-bieu-tuong-cua-pokemon.png', 90.0, 90.0, 100.0),
+                    AvaterN.img('https://genk.mediacdn.vn/k:thumb_w/640/2015/1-2-1444483204242/nhung-dieu-thu-vi-ve-pikachu-bieu-tuong-cua-pokemon.png', 90.0, 90.0, 100.0, '', 0, false),
                     const SizedBox(width:10),
                     Expanded(
           
@@ -164,7 +164,7 @@ class _feedFriendComponentsState extends State<feedFriendComponents> {
     )
   ),
                                 child: Row(children: <Widget>[
-                                  AvaterN.img('https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80', 57, 57, 57),
+                                  AvaterN.img('https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80', 57, 57, 57, '', 0, false),
                                   Padding(
                                     padding: const EdgeInsets.only(left: 5.0),
                                     child: CustomerTextN.textButton20black(

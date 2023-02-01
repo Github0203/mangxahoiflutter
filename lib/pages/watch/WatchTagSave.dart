@@ -130,7 +130,7 @@ final liveTextCtrl =
                                                 'https://genk.mediacdn.vn/k:thumb_w/640/2015/1-2-1444483204242/nhung-dieu-thu-vi-ve-pikachu-bieu-tuong-cua-pokemon.png',
                                                 35,
                                                 35,
-                                                35),
+                                                35,  '', 0, false),
                                             const SizedBox(
                                               width: 10,
                                             ),

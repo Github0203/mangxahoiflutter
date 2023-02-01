@@ -6,6 +6,7 @@ import 'package:mangxahoi/pages/feeds/appBAr/appBarComponent.dart';
 import 'package:mangxahoi/pages/feeds/feedPage.dart';
 import 'package:mangxahoi/pages/friend/friendHome.dart';
 import 'package:mangxahoi/pages/gropus/groupHome.dart';
+import 'package:mangxahoi/pages/personal/personalHome.dart';
 import 'package:mangxahoi/pages/watch/watchHome.dart';
 import 'package:mangxahoi/thuvien/nav_bottom/curved_navigation_bar.dart';
 import 'package:mangxahoi/components/bottomBar/bottombar.dart' as Globals;
@@ -35,7 +36,8 @@ class _HomePageState extends State<HomePage> {
           _page == 0 ? const appBarHome() :
           _page == 1 ? const appBarFriend() : 
           _page == 2 ? const appBarWatch() :
-          _page == 3 ? const appBarGroup() : const appBarWatch()
+          _page == 3 ? const appBarGroup() :
+          _page == 4 ? const appBarPersonal() : Container()
           // ),
         ],
       ),
@@ -103,7 +105,7 @@ class _HomePageState extends State<HomePage> {
               _page == 1 ? const friendHome() :
               _page == 2 ? const watchHome() : 
               _page == 3 ? const groupHome() :
-              _page == 4 ? Container() : Container()
+              _page == 4 ? const personalHome() : Container(),
         );
   }
 }
@@ -167,6 +169,21 @@ class appBarGroup extends StatelessWidget {
               child: const Padding(
                 padding: EdgeInsets.only(left: 8.0, right: 8.0),
                 child: appBarComponentHavePlus(tilte: 'Group'),
+              ));
+  }
+}
+class appBarPersonal extends StatelessWidget {
+  const appBarPersonal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    double setwidththucong = MediaQuery.of(context).size.width;
+    return Container(
+      color: Colors.white,
+              width: setwidththucong,
+              child: const Padding(
+                padding: EdgeInsets.only(left: 8.0, right: 8.0),
+                child: appBarComponentHavePlus(tilte: 'Trang cá nhân'),
               ));
   }
 }

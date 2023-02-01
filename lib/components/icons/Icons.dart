@@ -34,8 +34,7 @@ class icon_album extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_album.png',
@@ -53,8 +52,7 @@ class icon_amthanhthongbao extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_amthanhthongbao.png',
@@ -72,8 +70,7 @@ class icon_an extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_an.png',
@@ -91,8 +88,7 @@ class icon_anh extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_anh.png',
@@ -110,8 +106,7 @@ class icon_anthanhtinnhantrochuyen extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_anthanhtinnhantrochuyen.png',
@@ -140,15 +135,9 @@ class icon_bacham1 extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: avoid_unnecessary_containers
     return Container(
-        child: GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
-      }, // Image tapped
-      child: Image.asset(
-        'assets/png/icon_bacham1.png',
-      ),
-    ));
+        child: Image.asset(
+          'assets/png/icon_bacham1.png',
+        ));
   }
 }
 
@@ -174,8 +163,7 @@ class icon_banbe extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_banbe.png',
@@ -193,8 +181,7 @@ class icon_banbecuthe extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_banbecuthe.png',
@@ -212,8 +199,7 @@ class icon_banbekhongmau extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_banbekhongmau.png',
@@ -231,8 +217,7 @@ class icon_banbengoaitru extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_banbengoaitru.png',
@@ -269,8 +254,7 @@ class icon_binhluan extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_binhluan.png',
@@ -288,8 +272,7 @@ class icon_boloc extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_boloc.png',
@@ -307,8 +290,7 @@ class icon_botheodoi extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_botheodoi.png',
@@ -326,8 +308,7 @@ class icon_theodoi extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_theodoi.png',
@@ -345,8 +326,7 @@ class icon_caidat extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_caidat.png',
@@ -364,8 +344,7 @@ class icon_call extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_call.png',
@@ -383,8 +362,7 @@ class icon_callvideo extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_callvideo.png',
@@ -402,8 +380,7 @@ class icon_camera extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_camera.png',
@@ -421,8 +398,7 @@ class icon_canhbao extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_canhbao.png',
@@ -440,8 +416,7 @@ class icon_chan extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_chan.png',
@@ -459,8 +434,7 @@ class icon_chandaungang extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_chandaungang.png',
@@ -478,8 +452,7 @@ class icon_chanmaudo extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_chanmaudo.png',
@@ -497,8 +470,7 @@ class icon_checkin extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_checkin.png',
@@ -516,8 +488,7 @@ class icon_chiakhoa extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_chiakhoa.png',
@@ -535,8 +506,7 @@ class icon_chiase extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_chiase.png',
@@ -554,8 +524,7 @@ class iicon_chiakhoa extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/iicon_chiakhoa.png',
@@ -573,8 +542,7 @@ class icon_chiasezalo extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_chiasezalo.png',
@@ -592,8 +560,7 @@ class icon_chiasefacebook extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_chiasefacebook.png',
@@ -611,8 +578,7 @@ class icon_chiminhtoi extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_chiminhtoi.png',
@@ -630,8 +596,7 @@ class icon_chinhsua extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_chinhsua.png',
@@ -649,8 +614,7 @@ class icon_chinhsuathongtin extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_chinhsuathongtin.png',
@@ -668,8 +632,7 @@ class icon_congkhai extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_congkhai.png',
@@ -687,8 +650,7 @@ class icon_congviec extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_congviec.png',
@@ -706,8 +668,7 @@ class icon_dangxuat extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_dangxuat.png',
@@ -725,8 +686,7 @@ class icon_diadiemmauden extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_diadiemmauden.png',
@@ -762,8 +722,7 @@ class icon_ganthe extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_ganthe.png',
@@ -781,8 +740,7 @@ class icon_gioitinh extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_gioitinh.png',
@@ -800,8 +758,7 @@ class icon_hienthi extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_hienthi.png',
@@ -819,8 +776,7 @@ class icon_hinhanhmauxanh extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_hinhanhmauxanh.png',
@@ -838,8 +794,7 @@ class icon_kholuutru extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_kholuutru.png',
@@ -857,8 +812,7 @@ class icon_kinhnghiem extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_kinhnghiem.png',
@@ -876,8 +830,7 @@ class icon_lich extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_lich.png',
@@ -933,8 +886,7 @@ class icon_likemauxanhchat extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_likemauxanhchat.png',
@@ -953,7 +905,7 @@ class icon_logolon extends StatelessWidget {
         child: GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+            context, MaterialPageRoute(builder: (context) => const feedHome()));
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_logolon.png',
@@ -971,8 +923,7 @@ class icon_luutrutin extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_luutrutin.png',
@@ -990,8 +941,7 @@ class icon_matcuoi extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_matcuoi.png',
@@ -1022,8 +972,7 @@ class icon_mic extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_mic.png',
@@ -1056,8 +1005,7 @@ class icon_muitencaidat extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_muitencaidat.png',
@@ -1075,8 +1023,7 @@ class icon_muitenxuong extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_muitenxuong.png',
@@ -1094,8 +1041,7 @@ class icon_nhantinmautrang extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_nhantinmautrang.png',
@@ -1113,8 +1059,7 @@ class icon_nha extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_nha.png',
@@ -1132,8 +1077,7 @@ class icon_nhatkyhoatdong extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_nhatkyhoatdong.png',
@@ -1164,8 +1108,7 @@ class icon_nhommauden extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_nhommauden.png',
@@ -1183,8 +1126,7 @@ class icon_phonghopmat extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_phonghopmat.png',
@@ -1202,8 +1144,7 @@ class icon_quanlybaiviet extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_quanlybaiviet.png',
@@ -1221,8 +1162,7 @@ class icon_riengtu extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_riengtu.png',
@@ -1240,8 +1180,7 @@ class icon_sang extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_sang.png',
@@ -1259,8 +1198,7 @@ class icon_search extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_search.png',
@@ -1278,8 +1216,7 @@ class icon_sinhnhat extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_sinhnhat.png',
@@ -1297,8 +1234,7 @@ class icon_sodienthoai extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_sodienthoai.png',
@@ -1316,8 +1252,7 @@ class icon_sukien extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_sukien.png',
@@ -1335,8 +1270,7 @@ class icon_taoalbum extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_taoalbum.png',
@@ -1373,8 +1307,7 @@ class icon_thongbao extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_thongbao.png',
@@ -1392,8 +1325,7 @@ class icon_thongbaomauden extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_thongbaomauden.png',
@@ -1411,8 +1343,7 @@ class icon_timkiemtrongtrang extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_timkiemtrongtrang.png',
@@ -1430,8 +1361,7 @@ class icon_tinnhan extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_tinnhan.png',
@@ -1449,8 +1379,7 @@ class icon_tinnhanthongbaomauden extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_tinnhanthongbaomauden.png',
@@ -1468,8 +1397,7 @@ class icon_toi extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_toi.png',
@@ -1505,8 +1433,7 @@ class icon_video extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_video.png',
@@ -1562,8 +1489,7 @@ class icon_xacminh extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_xacminh.png',
@@ -1581,8 +1507,7 @@ class icon_xoa extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_xoa.png',
@@ -1600,8 +1525,7 @@ class icon_xoataikhoan extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/icon_xoataikhoan.png',
@@ -1619,8 +1543,7 @@ class phimtatthem extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/phimtatthem.png',
@@ -1738,8 +1661,7 @@ class dangkythanhcong extends StatelessWidget {
     return Container(
         child: GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        
       }, // Image tapped
       child: Image.asset(
         'assets/png/dangkythanhcong.png',
@@ -1989,6 +1911,20 @@ class icon_lichsu extends StatelessWidget {
       width: 30,
       child: Image.asset(
         'assets/png/icon_lichsu.png',
+      ),
+    );
+  }
+}
+// Icon icon_follow
+class icon_follow extends StatelessWidget {
+  const icon_follow({super.key});
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
+    return Container(
+      width: 30,
+      child: Image.asset(
+        'assets/png/icon_follow.png',
       ),
     );
   }

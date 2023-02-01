@@ -83,7 +83,7 @@ class _bottombarCState extends State<bottombarC> {
 
 
 class IDPageClass {
-    static  int pageClass = 1;
+    static  int pageClass = 0;
 }
 
 

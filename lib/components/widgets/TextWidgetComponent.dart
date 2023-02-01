@@ -155,4 +155,11 @@ class CustomerTextN {
             color: Colors.black,
             fontWeight: FontWeight.w500));
   }
+   static Widget textThuCong(String data, double fontSize) {
+    return Text(data,
+        style: TextStyle(
+            fontSize: fontSize,
+            color: Colors.black,
+            fontWeight: FontWeight.w500));
+  }
 }
