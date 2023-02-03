@@ -1541,14 +1541,9 @@ class phimtatthem extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: avoid_unnecessary_containers
     return Container(
-        child: GestureDetector(
-      onTap: () {
-        
-      }, // Image tapped
-      child: Image.asset(
-        'assets/png/phimtatthem.png',
-      ),
-    ));
+        child: Image.asset(
+          'assets/png/phimtatthem.png',
+        ));
   }
 }
 

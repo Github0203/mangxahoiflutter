@@ -50,7 +50,7 @@ class _appBarBottomState extends State<appBarBottom> {
   Navigator.push(
     context,
     PageRouteBuilder(
-        pageBuilder: (context, animation1, animation2) => const friendHome(),
+        pageBuilder: (context, animation1, animation2) => friendHome(),
         transitionDuration: const Duration(seconds: 0),
     ),
   );

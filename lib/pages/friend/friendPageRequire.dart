@@ -302,9 +302,12 @@ import 'package:mangxahoi/components/widgets/AvaterN.dart';
 import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 import 'package:mangxahoi/pages/feeds/appBAr/appBarComponent.dart';
 import 'package:mangxahoi/pages/feeds/feedPage.dart';
+import 'package:mangxahoi/pages/friend/friendC.dart';
 import 'package:mangxahoi/pages/friend/friendHome.dart';
 import 'package:mangxahoi/pages/gropus/groupHome.dart';
 import 'package:mangxahoi/pages/main/mainPage.dart';
+import 'package:mangxahoi/pages/notification/notifiHome.dart';
+import 'package:mangxahoi/pages/notification/notifiPage.dart';
 import 'package:mangxahoi/pages/personal/personalHome.dart';
 import 'package:mangxahoi/pages/watch/watchHome.dart';
 import 'package:mangxahoi/thuvien/nav_bottom/curved_navigation_bar.dart';
@@ -329,12 +332,12 @@ class _friendPageRequireState extends State<friendPageRequire> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: <Widget>[
-          _page == 0 ? const appBarHome() 
-          :
-          _page == 1 ? const appBarFriend() :
+          _page == 0 ? const appBarHome() :
+          _page == 1 ? const appBarFriend() : 
           _page == 2 ? const appBarWatch() :
-          _page == 3 ? const appBarFriend() :
-          _page == 4 ? const appBarPersonal() : Container()
+          _page == 3 ? const appBarGroup() :
+          _page == 4 ? const appBarNotification() : 
+          _page == 5 ? const appBarPersonal() : Container()
           // ),
         ],
       ),
@@ -348,6 +351,27 @@ class _friendPageRequireState extends State<friendPageRequire> {
             const Icon(Icons.videocam, size: 30),
             const Icon(Icons.groups, size: 30),
             // Icon(Icons.perm_identity, size: 30),
+            Stack(
+    children: <Widget>[
+      const icon_thongbao(),
+      Positioned(
+        right: 0,
+        child: Container(
+          padding: const EdgeInsets.all(1),
+          decoration: BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(6),
+          ),
+          // ignore: prefer_const_constructors
+          constraints: BoxConstraints(
+            minWidth: 16,
+            minHeight: 16,
+          ),
+          child: CustomerTextN.textButton13NormalWhite('29'),
+        ),
+      )
+    ],
+  ),
             Stack(
                         children: const <Widget>[
                           icon_ava(),
@@ -378,10 +402,11 @@ class _friendPageRequireState extends State<friendPageRequire> {
         ),
         body: 
         _page == 0 ? const feedHome() :
-              _page == 1 ? const friendHome() :
-              _page == 2 ? const friendPageRequireC() : 
+              _page == 1 ? const friendC() :
+              _page == 2 ? const watchHome() : 
               _page == 3 ? const groupHome() :
-              _page == 4 ? const personalHome() : Container(),
+              _page == 4 ? const notifiHome() :
+              _page == 5 ? const personalHome() : Container(),
         );
   }
 }
@@ -507,6 +532,7 @@ class friendPageRequireC extends StatelessWidget {
                             title: CustomerTextN.textButton16Normal(
                                 'Đóng')), // onPressed parameter is optional by default will dismiss the ActionSheet
                       ), 
+                     
                       child: CustomerTextN.textButton16blue('Sắp xếp'),
                       )
                   ],

@@ -6,11 +6,13 @@ import 'package:mangxahoi/components/widgets/ButtonComponentMauXam.dart';
 import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 import 'package:mangxahoi/pages/feeds/howdoyouthinkComponent.dart';
 import 'package:mangxahoi/pages/feeds/postComponent.dart';
+import 'package:mangxahoi/pages/friend/friendPage.dart';
 import 'package:mangxahoi/pages/personal/friendSpecial.dart';
 import 'package:mangxahoi/pages/personal/gallerySpecial.dart';
 import 'package:mangxahoi/pages/personal/introPersonal.dart';
 import 'package:mangxahoi/pages/personal/introSocials.dart';
 import 'package:mangxahoi/pages/personal/newSpecials.dart';
+import 'package:mangxahoi/pages/personal/personalPageFriend.dart';
 
 class personalPage extends StatefulWidget {
   const personalPage({super.key});
@@ -28,7 +30,7 @@ class _personalPageState extends State<personalPage> {
     return 
     SingleChildScrollView(
       child: 
-      trangcaidat ?
+      trangcaidat == false?
       Column(
         children: <Widget>[
             Center(
@@ -298,10 +300,23 @@ class _personalPageState extends State<personalPage> {
                         decoration: const BoxDecoration( border: Border(
                     bottom: BorderSide(width: 1, color: Color.fromARGB(120, 158, 158, 158)),
                   ), ),
-                      child: ButtonComponentMauXam(
-                          child: CustomerTextN.textButton13NormalWhite('Xem tất cả bạn bè'),
-            onPressed: () => {},
-            ),
+                      child: Container(
+                        child: GestureDetector(
+                          
+                          child: ButtonComponentMauXam(
+                            onPressed: () {
+                              Navigator.push(
+context,
+PageRouteBuilder(
+pageBuilder: (context, animation1, animation2) => personalPageFriend(),
+transitionDuration: const Duration(seconds: 0),
+)
+                        );
+                            },
+                              child: CustomerTextN.textButton13NormalWhite('Xem tất cả bạn bè'),
+                                    ),
+                        ),
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -558,6 +573,7 @@ class _personalPageState extends State<personalPage> {
           ),
         ),
       ),
+    
     );
   
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mangxahoi/components/appBar/popUpSelected.dart';
 import 'package:mangxahoi/components/buttons/buttons.dart';
 import 'package:mangxahoi/components/icons/Icons.dart';
 import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
@@ -17,13 +18,38 @@ class appBarComponent extends StatelessWidget {
           children: const <Widget>[
             Padding(
               padding: EdgeInsets.all(8.0),
-              child: phimtatthem(),
+              child: ButtonThem(),
             ),
             Padding(
               padding: EdgeInsets.all(8.0),
               child: icon_search(),
             ),
             icon_tinnhan(),
+          ],
+        ),
+      ],
+    );
+  }
+}
+class appBarComponentCreate extends StatelessWidget {
+  const appBarComponentCreate({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Row(
+          children: const<Widget>[
+             icon_Logo(),
+             SizedBox(width: 5,),
+            icon_trove(),
+          ],
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            CustomerTextN.textButton13blue('Đăng bài'),
           ],
         ),
       ],
@@ -62,12 +88,12 @@ class _appBarComponentHavePlusState extends State<appBarComponentHavePlus> {
                 Center(child: CustomerTextN.textButton18BoldlBlack(widget.tilte))
               ],),
           Row(
-            children: const <Widget>[
-              phimtatthem(),
-              SizedBox(width: 10,),
-          icon_search(),
-              SizedBox(width: 10,),
-                      icon_tinnhan(),
+            children:  <Widget>[
+              popUpSelected(),
+              const SizedBox(width: 10,),
+          const icon_search(),
+              const SizedBox(width: 10,),
+                      const icon_tinnhan(),
             ],
             ),
             ],

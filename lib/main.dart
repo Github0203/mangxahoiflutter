@@ -8,6 +8,7 @@ import 'package:mangxahoi/pages/login/formRegister/registerSussess.dart';
 import 'package:mangxahoi/pages/login/login.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:mangxahoi/pages/main/mainPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,7 +58,8 @@ ThemeData _baseTheme = ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
-      home: const loginPage(),
+      // home: const loginPage(),
+      home: HomePage(),
       initialRoute: '/',
       routes: {
         // When navigating to the "/" route, build the HomeScreen widget.
@@ -69,7 +71,7 @@ ThemeData _baseTheme = ThemeData(
         '/registersussess': (context) => const registerSussess(),
         '/feed': (context) => const feedHome(),
         '/createpost': (context) => const appBarCreatePost(),
-        '/friendfeed': (context) => const friendHome(),
+        '/friendfeed': (context) => friendHome(),
       },
     );
   }

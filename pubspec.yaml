@@ -78,7 +78,7 @@ dependencies:
   # youtube_player_iframe: ^2.2.2
 
   flutter_staggered_grid_view: ^0.4.1
-  photo_view: ^0.13.0
+  # photo_view: ^0.13.0
   flutter_gherkin: ^2.0.0
 
   # nav_bottom
@@ -105,9 +105,39 @@ dependencies:
   # http: ^0.13.4
   flutter_styled_toast: ^2.1.3
   zego_uikit: ^1.9.0
+  zego_zpns: ^2.2.0
 
   permission_handler: ^10.2.0
 
+  # story 
+  share_plus: ^6.3.0
+  # cupertino_icons: ^1.0.2
+  # provider: ^6.0.4
+  # image
+  image: ^3.2.2
+  # path_provider: ^2.0.11
+  photo_view: ^0.14.0
+  # with this ref fix `Looking up a deactivated widget's ancestor is unsafe`.
+  #photo_view:
+  #  git:
+  #    url: https://github.com/bluefireteam/photo_view
+  #    ref: 8156907eecfa812b181a5a729d790f6d399f311b
+  image_gallery_saver: ^1.7.1
+  #own packages
+  gallery_media_picker: ^0.0.82
+
+
+  modal_gif_picker: ^0.0.2
+  # painting
+  perfect_freehand: ^1.0.4
+  # positioning
+  align_positioned: ^3.0.0
+  #message
+  fluttertoast: ^8.1.1
+
+  animated_text_kit: ^4.2.2
+
+  # flutter_screenutil: ^5.6.0
 
 
 dev_dependencies:
@@ -157,6 +187,7 @@ flutter:
 
 
 
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -168,16 +199,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
+  fonts:
+    - family: Shizuru
+      fonts:
+        - asset: assets/fonts/Shizuru-Regular.ttf
+    - family: Aladin
+      fonts:
+        - asset: assets/fonts/Aladin-Regular.ttf
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,

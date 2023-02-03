@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mangxahoi/components/appBar/popUpSelected.dart';
 import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 import 'package:mangxahoi/pages/feeds/howdoyouthinkComponent.dart';
 import 'package:mangxahoi/pages/feeds/postComponent.dart';
@@ -43,7 +44,7 @@ class feedComponents extends StatelessWidget {
             decoration: const BoxDecoration(
               color: Color.fromARGB(255, 255, 255, 255),
             ),
-            child: const shortcut3cuc(),
+            child: const  shortcut3cuc(),
           ),
           const postComponent(),
           const SizedBox(

@@ -102,9 +102,14 @@ import 'package:mangxahoi/components/tabComponent/tabFriendPage.dart';
 import 'package:mangxahoi/components/widgets/TextWidgetComponent.dart';
 import 'package:mangxahoi/pages/feeds/appBAr/appBarComponent.dart';
 import 'package:mangxahoi/pages/feeds/feedPage.dart';
+import 'package:mangxahoi/pages/friend/friendC.dart';
 import 'package:mangxahoi/pages/friend/friendHome.dart';
+import 'package:mangxahoi/pages/friend/friendPageRequire.dart';
+import 'package:mangxahoi/pages/friend/pageFriendRequired.dart';
 import 'package:mangxahoi/pages/gropus/groupHome.dart';
 import 'package:mangxahoi/pages/main/mainPage.dart';
+import 'package:mangxahoi/pages/notification/notifiHome.dart';
+import 'package:mangxahoi/pages/notification/notifiPage.dart';
 import 'package:mangxahoi/pages/personal/personalHome.dart';
 import 'package:mangxahoi/pages/watch/watchHome.dart';
 import 'package:mangxahoi/thuvien/nav_bottom/curved_navigation_bar.dart';
@@ -138,7 +143,8 @@ class _friendPageState extends State<friendPage> {
           _page == 1 ? const appBarFriend() : 
           _page == 2 ? const appBarWatch() :
           _page == 3 ? const appBarGroup() :
-          _page == 4 ? const appBarPersonal() : Container()
+          _page == 4 ? const appBarNotification() : 
+          _page == 5 ? const appBarPersonal() : Container()
           // ),
         ],
       ),
@@ -162,6 +168,27 @@ class _friendPageState extends State<friendPage> {
               const Icon(Icons.videocam, size: 30),
               const Icon(Icons.groups, size: 30),
               // Icon(Icons.perm_identity, size: 30),
+              Stack(
+    children: <Widget>[
+      const icon_thongbao(),
+      Positioned(
+        right: 0,
+        child: Container(
+          padding: const EdgeInsets.all(1),
+          decoration: BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(6),
+          ),
+          // ignore: prefer_const_constructors
+          constraints: BoxConstraints(
+            minWidth: 16,
+            minHeight: 16,
+          ),
+          child: CustomerTextN.textButton13NormalWhite('29'),
+        ),
+      )
+    ],
+  ),
               Stack(
                           children: const <Widget>[
                             icon_ava(),
@@ -192,10 +219,11 @@ class _friendPageState extends State<friendPage> {
           ),
         ),
         body: _page == 0 ? const feedHome() :
-              _page == 1 ? const friendPageC() :
+              _page == 1 ? friendHome() :
               _page == 2 ? const watchHome() : 
               _page == 3 ? const groupHome() :
-              _page == 4 ? const personalHome() : Container(),
+              _page == 4 ? const notifiHome() :
+              _page == 5 ? const personalHome() : Container(),
         
         );
   }
@@ -229,7 +257,7 @@ class appBarFriend extends StatelessWidget {
               width: setwidththucong,
               child: const Padding(
                 padding: EdgeInsets.only(left: 8.0, right: 8.0),
-                child: appBarComponentHavePlus(tilte: 'Lời mời kết bạn'),
+                child: appBarComponentHavePlus(tilte: 'Bạn bè'),
               ));
   }
 }
@@ -247,7 +275,36 @@ class appBarWatch extends StatelessWidget {
               ));
   }
 }
+class appBarGroup extends StatelessWidget {
+  const appBarGroup({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    double setwidththucong = MediaQuery.of(context).size.width;
+    return Container(
+      color: Colors.white,
+              width: setwidththucong,
+              child: const Padding(
+                padding: EdgeInsets.only(left: 8.0, right: 8.0),
+                child: appBarComponentHavePlus(tilte: 'Group'),
+              ));
+  }
+}
+class appBarPersonal extends StatelessWidget {
+  const appBarPersonal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    double setwidththucong = MediaQuery.of(context).size.width;
+    return Container(
+      color: Colors.white,
+              width: setwidththucong,
+              child: const Padding(
+                padding: EdgeInsets.only(left: 8.0, right: 8.0),
+                child: appBarComponentHavePlus(tilte: 'Trang cá nhân'),
+              ));
+  }
+}
 
 class friendPageC extends StatelessWidget {   
   const friendPageC({super.key});
@@ -269,7 +326,7 @@ class friendPageC extends StatelessWidget {
                         Navigator.push(
 context,
 PageRouteBuilder(
-pageBuilder: (context, animation1, animation2) => const friendHome(),
+pageBuilder: (context, animation1, animation2) => pageFriendRequired(),
 transitionDuration: const Duration(seconds: 0),
 ),
 ),
